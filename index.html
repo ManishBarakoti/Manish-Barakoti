@@ -1,0 +1,2664 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Manish Barakoti | Freelance Web Developer
+  </title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <link rel="canonical" href="/">
+  <meta property="og:site_name" content="Manish Barakoti">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Manish Barakoti | Freelance Web Developer">
+  <meta property="og:description" content="I build professional websites for local businesses.">
+  <meta property="og:url" content="/">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Manish Barakoti | Freelance Web Developer">
+  <meta name="twitter:description" content="I build professional websites for local businesses.">
+  <meta name="twitter:image:alt" content="Designer and developer tool illustrations">
+  <link href="img/mk-logo.svg" rel="icon" type="image/svg+xml">
+  <link href="img/favicon-32.png" rel="shortcut icon" type="image/png">
+  <link rel="stylesheet" href="css/main.css">
+  <style>
+    /* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+       PORTFOLIO POLISH â€” FINAL REFINEMENTS
+    â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */
+
+    /* â”€â”€ General Spacing â”€â”€ */
+    .section.is-medium {
+      padding-top: 6rem;
+      padding-bottom: 6rem;
+    }
+
+    /* â”€â”€ Heading sizes boost â”€â”€ */
+    .title.is-size-3-desktop { font-size: 2rem !important; }
+    h1.title.is-spaced { letter-spacing: -0.01em; }
+
+    /* â”€â”€ Button hover effects â”€â”€ */
+    .button { transition: transform .2s ease, box-shadow .2s ease; }
+    .button:hover { transform: translateY(-2px); box-shadow: 0 6px 20px rgba(110,7,243,0.18); }
+
+    /* â”€â”€ Hero Trust Line â”€â”€ */
+    .hero-trust-line {
+      font-size: 0.83rem;
+      color: #888;
+      margin-top: 1.4rem;
+      margin-bottom: 0.5rem;
+      letter-spacing: 0.02em;
+    }
+    .hero-trust-line .check { color: #6E07F3; font-weight: 700; }
+    .hero-cta-wrap { margin-bottom: 0.25rem; }
+
+    /* â”€â”€ Services (Skills) Section â”€â”€ */
+    .skills .box {
+      box-shadow: 0 6px 32px rgba(110,7,243,0.10);
+      border: 1px solid rgba(110,7,243,0.08);
+      padding: 3rem 2rem;
+      border-radius: 16px;
+    }
+    .skills .column {
+      padding: 2rem 1.5rem;
+      border-radius: 12px;
+      transition: background .2s ease, box-shadow .2s ease, transform .22s ease;
+    }
+    .skills .column:hover {
+      background: rgba(110,7,243,0.05);
+      box-shadow: 0 8px 28px rgba(110,7,243,0.13);
+      transform: translateY(-5px);
+    }
+    .skills .column .title {
+      font-weight: 800;
+      font-size: 1.1rem;
+    }
+
+    /* â”€â”€ Project Card Polish â”€â”€ */
+    .project-card {
+      background: #ffffff;
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 2px 12px rgba(110,7,243,0.06), 0 8px 32px rgba(20,28,58,0.08);
+      transition: box-shadow .28s ease, transform .28s ease;
+    }
+    .project-card:hover {
+      box-shadow: 0 10px 36px rgba(20,28,58,0.16);
+      transform: translateY(-4px);
+    }
+    .project-card .image img {
+      border-radius: 0;
+      box-shadow: none;
+    }
+    .project-card-body {
+      padding: 1.75rem 1.6rem 1.9rem;
+    }
+    .project-result-tag {
+      display: block;
+      background: rgba(110,7,243,0.09);
+      color: #6E07F3;
+      font-size: 0.82rem;
+      font-weight: 800;
+      padding: 0.45rem 1rem;
+      border-radius: 6px;
+      margin-bottom: 1rem;
+      letter-spacing: 0.01em;
+      border-left: 4px solid #6E07F3;
+      font-size: 0.875rem;
+      font-weight: 900;
+      color: #5800d4;
+      background: rgba(110,7,243,0.13);
+    }
+    .project-live-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      margin-top: 0.6rem;
+      padding: 0.6rem 1.4rem;
+      background: #6E07F3;
+      border: 2px solid #6E07F3;
+      border-radius: 50px;
+      color: #fff;
+      font-weight: 700;
+      font-size: 0.875rem;
+      text-decoration: none;
+      transition: background .2s ease, color .2s ease, transform .2s ease, box-shadow .2s ease;
+      box-shadow: 0 3px 14px rgba(110,7,243,0.28);
+    }
+    .project-live-btn:hover {
+      background: #5800d4;
+      border-color: #5800d4;
+      color: #fff;
+      transform: translateY(-2px);
+      box-shadow: 0 6px 22px rgba(110,7,243,0.38);
+    }
+
+    /* â”€â”€ How I Work Section â”€â”€ */
+    #how-i-work { background: #f7f5ff; }
+    .hiw-steps-wrapper {
+      position: relative;
+      display: flex;
+      gap: 2.5rem;
+      margin-top: 3rem;
+      align-items: flex-start;
+    }
+    /* Timeline connector for desktop */
+    @media (min-width: 769px) {
+      .hiw-steps-wrapper::before {
+        content: '';
+        position: absolute;
+        top: 34px;
+        left: calc(16.66% + 0px);
+        right: calc(16.66% + 0px);
+        height: 2px;
+        background: linear-gradient(90deg, #6E07F3 0%, rgba(110,7,243,0.2) 100%);
+        z-index: 0;
+      }
+    }
+    .how-i-work-step {
+      position: relative;
+      z-index: 1;
+      flex: 1;
+      padding: 2.5rem 1.5rem 2.25rem;
+      border-radius: 16px;
+      background: #fff;
+      box-shadow: 0 4px 24px rgba(110,7,243,0.08);
+      transition: box-shadow .25s ease, transform .25s ease;
+      text-align: center;
+    }
+    .how-i-work-step:hover {
+      box-shadow: 0 10px 32px rgba(110,7,243,0.15);
+      transform: translateY(-5px);
+    }
+    .how-i-work-step-icon {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 84px;
+      height: 84px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, rgba(110,7,243,0.18) 0%, rgba(110,7,243,0.10) 100%);
+      border: 2.5px solid rgba(110,7,243,0.35);
+      color: #6E07F3;
+      margin: 0 auto 1.5rem;
+      flex-shrink: 0;
+      box-shadow: 0 2px 12px rgba(110,7,243,0.12);
+    }
+    .how-i-work-step-icon svg {
+      display: block;
+      width: 42px;
+      height: 42px;
+      flex-shrink: 0;
+    }
+    .how-i-work-step .step-num {
+      font-size: 0.75rem;
+      font-weight: 800;
+      color: #6E07F3;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      margin-bottom: 0.4rem;
+    }
+    @media (max-width: 768px) {
+      .hiw-steps-wrapper { flex-direction: column; gap: 1.5rem; }
+    }
+
+    /* â”€â”€ New CTA Section â”€â”€ */
+    #cta-new {
+      background: linear-gradient(135deg, #6E07F3 0%, #8e2ef7 100%);
+      padding: 6rem 1.5rem;
+      text-align: center;
+    }
+    #cta-new .cta-title {
+      font-size: 2.2rem;
+      font-weight: 800;
+      color: #fff;
+      margin-bottom: 0.9rem;
+      line-height: 1.3;
+    }
+    #cta-new .cta-sub {
+      color: rgba(255,255,255,0.88);
+      font-size: 1.08rem;
+      margin-bottom: 2.5rem;
+    }
+    #cta-new .cta-btn {
+      background: #fff;
+      color: #6E07F3;
+      border: none;
+      border-radius: 50px;
+      font-size: 1.05rem;
+      font-weight: 700;
+      padding: 0.95rem 2.75rem;
+      cursor: pointer;
+      text-decoration: none;
+      display: inline-block;
+      transition: box-shadow .2s ease, transform .2s ease;
+      box-shadow: 0 6px 28px rgba(0,0,0,0.20);
+    }
+    #cta-new .cta-btn:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 14px 36px rgba(0,0,0,0.25);
+    }
+
+    /* â”€â”€ Sticky WhatsApp Button â”€â”€ */
+    #whatsapp-float {
+      position: fixed;
+      bottom: 1.75rem;
+      right: 1.75rem;
+      z-index: 9998;
+      width: 60px;
+      height: 60px;
+      background: #25D366;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 4px 22px rgba(37,211,102,0.55);
+      text-decoration: none;
+      transition: transform .2s ease, box-shadow .2s ease;
+    }
+    #whatsapp-float:hover {
+      transform: scale(1.12);
+      box-shadow: 0 8px 30px rgba(37,211,102,0.65);
+    }
+    #whatsapp-float i {
+      color: #fff;
+      font-size: 1.85rem;
+      line-height: 1;
+    }
+
+    /* â”€â”€ Testimonial Stars â”€â”€ */
+    .testimonial-stars {
+      color: #f5a623;
+      font-size: 1.2rem;
+      letter-spacing: 2px;
+      margin-bottom: 0.75rem;
+      display: block;
+    }
+
+    /* â”€â”€ Contact Modal â”€â”€ */
+    #contact-modal-overlay {
+      display: none;
+      position: fixed;
+      inset: 0;
+      z-index: 9999;
+      background: rgba(20, 28, 58, 0.55);
+      backdrop-filter: blur(4px);
+      align-items: center;
+      justify-content: center;
+      padding: 1rem;
+      animation: fadeInOverlay .25s ease;
+    }
+
+    #contact-modal-overlay.is-active {
+      display: flex;
+    }
+
+    @keyframes fadeInOverlay {
+      from {
+        opacity: 0;
+      }
+
+      to {
+        opacity: 1;
+      }
+    }
+
+    #contact-modal {
+      background: #fff;
+      border-radius: 16px;
+      width: 100%;
+      max-width: 680px;
+      max-height: 92vh;
+      overflow-y: auto;
+      padding: 2.5rem 2rem 2rem;
+      position: relative;
+      box-shadow: 0 20px 60px rgba(20, 28, 58, 0.22);
+      animation: slideUpModal .28s cubic-bezier(.22, .68, 0, 1.2);
+    }
+
+    @keyframes slideUpModal {
+      from {
+        opacity: 0;
+        transform: translateY(32px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    #contact-modal-close {
+      position: absolute;
+      top: 1rem;
+      right: 1.2rem;
+      background: none;
+      border: none;
+      cursor: pointer;
+      font-size: 1.4rem;
+      color: #aaa;
+      line-height: 1;
+      transition: color .15s;
+      padding: 0;
+    }
+
+    #contact-modal-close:hover {
+      color: #141c3a;
+    }
+
+    .modal-avatar {
+      width: 64px;
+      height: 64px;
+      border-radius: 50%;
+      object-fit: cover;
+      object-position: top;
+      margin: 0 auto 1.25rem;
+      display: block;
+      border: 3px solid #ede;
+    }
+
+    .modal-heading {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: #141c3a;
+      text-align: center;
+      line-height: 1.35;
+      margin-bottom: 1.75rem;
+    }
+
+    .modal-form .label {
+      font-size: 0.82rem;
+      font-weight: 400;
+      color: #7a7a9d;
+      margin-bottom: 0.3rem;
+    }
+
+    .modal-form .input,
+    .modal-form .textarea {
+      border: 1.5px solid #d6d6f5;
+      border-radius: 6px;
+      box-shadow: none;
+      color: #141c3a;
+      background: #fff;
+      transition: border-color .2s;
+    }
+
+    .modal-form .input:focus,
+    .modal-form .textarea:focus {
+      border-color: #6E07F3;
+      box-shadow: 0 0 0 2px rgba(110, 7, 243, 0.10);
+      outline: none;
+    }
+
+    .modal-form .select select {
+      border: 1.5px solid #d6d6f5;
+      border-radius: 6px;
+      box-shadow: none;
+      color: #141c3a;
+    }
+
+    .modal-form .select:not(.is-multiple):not(.is-loading)::after {
+      border-color: #6E07F3;
+    }
+
+    .modal-form .select select:focus {
+      border-color: #6E07F3;
+      box-shadow: 0 0 0 2px rgba(110, 7, 243, 0.10);
+      outline: none;
+    }
+
+    .modal-form .select,
+    .modal-form .select.is-fullwidth,
+    .modal-form .select.is-fullwidth select {
+      width: 100%;
+    }
+
+    .modal-form .columns .column {
+      padding-top: 0.55rem;
+      padding-bottom: 0.55rem;
+    }
+
+    @media (max-width: 480px) {
+      #contact-modal {
+        padding: 2rem 1rem 1.5rem;
+      }
+
+      .modal-heading {
+        font-size: 1.2rem;
+      }
+    }
+    /* â”€â”€ Sticky WhatsApp Button â”€â”€ */
+    #whatsapp-float {
+      position: fixed;
+      bottom: 1.75rem;
+      right: 1.75rem;
+      z-index: 9998;
+      width: 58px;
+      height: 58px;
+      background: #25D366;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 4px 20px rgba(37,211,102,0.5);
+      text-decoration: none;
+      transition: transform .2s ease, box-shadow .2s ease;
+    }
+
+    /* ── Hero Secondary CTA Button ── */
+    .hero-secondary-btn {
+      background: transparent !important;
+      border: 2px solid #333 !important;
+      color: #333 !important;
+      font-weight: 600;
+      display: inline-flex;
+      align-items: center;
+      text-decoration: none;
+      transition: background 0.2s ease, color 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
+    }
+    .hero-secondary-btn:hover {
+      background: #111 !important;
+      color: #fff !important;
+      border-color: #111 !important;
+      box-shadow: 0 6px 22px rgba(0,0,0,0.15);
+      transform: translateY(-2px);
+    }
+    @media (max-width: 480px) {
+      .hero-cta-wrap { flex-direction: column !important; align-items: center; }
+      .hero-cta-wrap .button { width: 100%; max-width: 280px; justify-content: center; }
+    }
+
+    /* ═══════════════════════════════════════════════════════════
+       DESIGN REFINEMENTS — Premium Polish Pass
+    ═══════════════════════════════════════════════════════════ */
+
+    /* ── Base Typography ── */
+    body {
+      font-family: 'europa', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      -webkit-font-smoothing: antialiased;
+      color: #141c3a;
+    }
+
+    /* ── Navbar ── */
+    .navbar.is-transparent {
+      padding: 0.5rem 0;
+      border-bottom: 1px solid rgba(20,28,58,0.06);
+      background: rgba(255,255,255,0.97) !important;
+      backdrop-filter: blur(8px);
+    }
+    .navbar-item, .navbar-link {
+      font-size: 0.92rem;
+      color: #444 !important;
+      letter-spacing: 0.01em;
+    }
+    .navbar-item:hover { color: #6E07F3 !important; }
+
+    /* ── HERO SECTION ── */
+    .hero.is-white { background: #ffffff; }
+    .hero .hero-body {
+      padding-top: 5.5rem !important;
+      padding-bottom: 5rem !important;
+    }
+    .hero h1.title {
+      font-size: clamp(1.85rem, 4.5vw, 3rem) !important;
+      font-weight: 800;
+      line-height: 1.18;
+      letter-spacing: -0.025em;
+      color: #0f1628;
+      margin-bottom: 1.4rem !important;
+    }
+    .hero h2.subtitle {
+      font-size: clamp(1rem, 2vw, 1.2rem) !important;
+      color: #5a6480;
+      line-height: 1.7;
+      margin-bottom: 2.25rem !important;
+      font-weight: 400;
+    }
+
+    /* ── CTA Buttons ── */
+    .hero-cta-wrap {
+      gap: 0.9rem !important;
+      margin-bottom: 1.5rem !important;
+    }
+    .hero-cta-wrap .button.is-primary {
+      background: #6E07F3;
+      color: #fff;
+      font-size: 1rem !important;
+      font-weight: 700;
+      padding: 0.85rem 2.4rem !important;
+      border-radius: 50px;
+      border: 2px solid #6E07F3;
+      box-shadow: 0 4px 20px rgba(110,7,243,0.30);
+      letter-spacing: 0.01em;
+    }
+    .hero-cta-wrap .button.is-primary:hover {
+      background: #5800d4;
+      border-color: #5800d4;
+      box-shadow: 0 8px 28px rgba(110,7,243,0.42);
+      transform: translateY(-2px);
+    }
+    .hero-secondary-btn {
+      font-size: 0.95rem !important;
+      font-weight: 600;
+      letter-spacing: 0.01em;
+      color: #2a2a3d !important;
+      border-color: rgba(20,28,58,0.28) !important;
+    }
+
+    /* ── Trust Line ── */
+    .hero-trust-line {
+      font-size: 0.82rem !important;
+      color: #8896a6 !important;
+      margin-top: 0.25rem !important;
+      letter-spacing: 0.025em;
+      line-height: 1.8;
+    }
+    .hero-trust-line .check { color: #5cb85c; font-weight: 800; }
+
+    /* ── Avatar ── */
+    .avatar {
+      width: 88px !important;
+      height: 88px !important;
+      border-radius: 50% !important;
+      object-fit: cover;
+      object-position: top;
+      border: 3px solid #ede8fe;
+      box-shadow: 0 4px 18px rgba(110,7,243,0.15);
+      margin-top: 2.75rem !important;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    /* ── About / Intro Purple Section ── */
+    .section.is-primary {
+      padding-top: 5.5rem !important;
+      padding-bottom: 5.5rem !important;
+    }
+    .section.is-primary h1.title {
+      font-size: 1.8rem;
+      font-weight: 800;
+      color: #fff !important;
+      margin-bottom: 1.4rem !important;
+    }
+    .section.is-primary h2.subtitle {
+      font-size: 1.05rem;
+      line-height: 1.85;
+      color: #fff !important;
+      opacity: 1;
+      max-width: 520px;
+      margin: 0 auto;
+    }
+
+    /* ── Services / Skills Section ── */
+    .skills { padding-top: 5.5rem !important; padding-bottom: 5.5rem !important; }
+    .skills .box {
+      border-radius: 20px !important;
+      padding: 3.5rem 2.5rem !important;
+      box-shadow: 0 4px 28px rgba(110,7,243,0.08), 0 0 0 1px rgba(110,7,243,0.06) !important;
+    }
+    .skills .columns { gap: 0; row-gap: 0; }
+    .skills .column {
+      padding: 2rem 1.75rem !important;
+      border-radius: 14px;
+    }
+    .skills .column:hover {
+      background: rgba(110,7,243,0.04) !important;
+      box-shadow: 0 6px 24px rgba(110,7,243,0.10) !important;
+    }
+    .skills .fa-stack { margin-bottom: 1.1rem; }
+    .skills .column h1.title {
+      font-size: 1.08rem !important;
+      font-weight: 800 !important;
+      color: #141c3a;
+      margin-bottom: 0.65rem !important;
+      letter-spacing: -0.01em;
+    }
+    .skills .column p {
+      font-size: 0.9rem;
+      line-height: 1.7;
+      color: #667;
+    }
+    .skills .column p strong { color: #141c3a; font-weight: 700; }
+
+    /* ── Projects Section ── */
+    .section.projects {
+      padding-top: 6rem !important;
+      padding-bottom: 6rem !important;
+    }
+    .proj-section-badge {
+      font-size: 0.70rem !important;
+      letter-spacing: 0.14em !important;
+      padding: 0.35rem 1.2rem !important;
+      margin-bottom: 1.4rem !important;
+    }
+    .proj-section-title {
+      font-size: clamp(1.8rem, 3.5vw, 2.5rem) !important;
+      margin-bottom: 1.1rem !important;
+      letter-spacing: -0.02em;
+    }
+    .proj-section-sub {
+      font-size: 1rem !important;
+      color: #666 !important;
+      margin-bottom: 0 !important;
+      line-height: 1.75;
+    }
+    .proj-accent-rule {
+      margin: 1.8rem auto 2.8rem !important;
+    }
+
+    /* Filter pills */
+    .proj-filter-shell {
+      margin-bottom: 2.8rem !important;
+      gap: 0.4rem !important;
+    }
+    .proj-filter-btn {
+      font-size: 0.86rem !important;
+      padding: 0.5rem 1.25rem !important;
+      font-weight: 600 !important;
+      letter-spacing: 0.005em;
+    }
+    .proj-filter-btn.is-active {
+      font-weight: 700 !important;
+    }
+
+    /* ── Project Cards ── */
+    .project-card {
+      border-radius: 18px !important;
+      box-shadow: 0 2px 10px rgba(20,28,58,0.07), 0 6px 28px rgba(20,28,58,0.06) !important;
+      border: 1px solid rgba(20,28,58,0.06);
+    }
+    .project-card:hover {
+      box-shadow: 0 8px 32px rgba(20,28,58,0.14), 0 2px 8px rgba(110,7,243,0.08) !important;
+      transform: translateY(-5px) !important;
+      border-color: rgba(110,7,243,0.12);
+    }
+    .project-card-body {
+      padding: 1.6rem 1.7rem 1.85rem !important;
+    }
+    .project-category {
+      display: inline-block;
+      font-size: 0.72rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: #6E07F3;
+      margin-bottom: 0.6rem;
+      opacity: 0.85;
+    }
+    .project-card-body h3.title {
+      font-size: 1.1rem !important;
+      font-weight: 800 !important;
+      color: #0f1628 !important;
+      margin-bottom: 0.55rem !important;
+      line-height: 1.3;
+      letter-spacing: -0.01em;
+    }
+    .project-card-body .has-text-grey {
+      font-size: 0.875rem !important;
+      line-height: 1.65;
+      color: #7a8499 !important;
+      margin-bottom: 0.85rem !important;
+    }
+    .project-result-tag {
+      font-size: 0.80rem !important;
+      font-weight: 700 !important;
+      padding: 0.5rem 1rem !important;
+      border-radius: 8px !important;
+      margin-bottom: 1.1rem !important;
+      background: rgba(110,7,243,0.08) !important;
+      color: #5800d4 !important;
+      border-left: 3px solid #6E07F3 !important;
+    }
+    .project-live-btn {
+      font-size: 0.84rem !important;
+      padding: 0.55rem 1.3rem !important;
+      box-shadow: 0 2px 12px rgba(110,7,243,0.20) !important;
+    }
+    .project-live-btn:hover {
+      box-shadow: 0 5px 18px rgba(110,7,243,0.36) !important;
+    }
+
+    /* Project image hover overlay */
+    .project-card figure { position: relative; overflow: hidden; }
+    .project-card figure .overlay {
+      position: absolute; inset: 0;
+      background: rgba(14,10,40,0);
+      transition: background 0.3s ease;
+      z-index: 1;
+    }
+    .project-card:hover figure .overlay { background: rgba(14,10,40,0.32); }
+    .project-card figure figcaption {
+      position: absolute; inset: 0; z-index: 2;
+      display: flex; align-items: center; justify-content: center;
+      opacity: 0; transition: opacity 0.28s ease;
+    }
+    .project-card:hover figure figcaption { opacity: 1; }
+    .project-overlay-btn {
+      display: inline-flex; align-items: center; gap: 0.45rem;
+      background: #fff; color: #6E07F3;
+      padding: 0.6rem 1.4rem;
+      border-radius: 50px; font-weight: 700; font-size: 0.88rem;
+      text-decoration: none;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.22);
+      transition: background 0.2s, transform 0.2s;
+    }
+    .project-overlay-btn:hover { background: #6E07F3; color: #fff; transform: scale(1.04); }
+
+    /* See More button */
+    .see-more-wrap { margin-top: 2.75rem !important; }
+    .see-more-btn {
+      padding: 0.75rem 2.2rem !important;
+      font-size: 0.95rem !important;
+      font-weight: 700 !important;
+      border-width: 2px !important;
+    }
+
+    /* ── How I Work Section ── */
+    #how-i-work { padding-top: 6rem !important; padding-bottom: 6rem !important; }
+    .hiw-steps-wrapper { gap: 2rem !important; margin-top: 3.5rem !important; }
+    .how-i-work-step { padding: 2.5rem 1.75rem 2.25rem !important; }
+    .how-i-work-step h3.title {
+      font-size: 1.05rem !important;
+      font-weight: 800 !important;
+      color: #0f1628;
+      letter-spacing: -0.01em;
+    }
+    .how-i-work-step .has-text-grey {
+      font-size: 0.9rem !important;
+      line-height: 1.7;
+      color: #7a8499 !important;
+    }
+    .how-i-work-step-icon {
+      width: 76px !important; height: 76px !important;
+    }
+
+    /* ── Testimonials ── */
+    .section.testimonials {
+      padding-top: 6rem !important;
+      padding-bottom: 6rem !important;
+      background: #fdfcff !important;
+    }
+    .section.testimonials h1.title {
+      font-size: 2rem !important;
+      font-weight: 800;
+      margin-bottom: 0.5rem !important;
+    }
+    .section.testimonials h2.subtitle {
+      font-size: 1rem !important;
+      color: #7a8499;
+      margin-bottom: 2.5rem !important;
+    }
+    .testimonial-card {
+      background: #fff;
+      border-radius: 20px;
+      padding: 2.75rem 2.5rem;
+      box-shadow: 0 4px 26px rgba(20,28,58,0.07), 0 0 0 1px rgba(20,28,58,0.05);
+    }
+    .testimonial-quote p {
+      font-size: 1.05rem !important;
+      line-height: 1.78 !important;
+      color: #2a2a3d;
+      font-style: italic;
+    }
+    .testimonial-name {
+      font-size: 1rem !important;
+      font-weight: 700 !important;
+      color: #141c3a;
+      margin-top: 1.5rem !important;
+      display: block;
+    }
+    .testimonial-role {
+      font-size: 0.84rem !important;
+      color: #9a9abf !important;
+      margin-top: 0.2rem !important;
+      display: block;
+    }
+    .testimonial-stars {
+      font-size: 1.15rem !important;
+      letter-spacing: 1px;
+      margin-bottom: 1rem !important;
+    }
+
+    /* ── CTA Banner ── */
+    #cta-new {
+      padding: 7rem 1.5rem !important;
+    }
+    #cta-new .cta-title {
+      font-size: clamp(1.75rem, 3.5vw, 2.4rem) !important;
+      font-weight: 800;
+      line-height: 1.25;
+      margin-bottom: 1rem !important;
+    }
+    #cta-new .cta-sub {
+      font-size: 1.05rem !important;
+      margin-bottom: 2.75rem !important;
+      opacity: 0.9;
+    }
+
+    /* ── Section Headings global ── */
+    .section h1.title.is-spaced {
+      font-weight: 800;
+      letter-spacing: -0.02em;
+    }
+    .section h2.subtitle.has-text-weight-normal {
+      color: #7a8499;
+      line-height: 1.75;
+    }
+
+    /* ── Mobile Refinements ── */
+    @media (max-width: 768px) {
+      .hero .hero-body { padding-top: 4rem !important; padding-bottom: 3.5rem !important; }
+      .hero h1.title { font-size: 1.75rem !important; letter-spacing: -0.02em; }
+      .hero h2.subtitle { font-size: 0.97rem !important; margin-bottom: 1.75rem !important; }
+      .hero-cta-wrap { flex-direction: column !important; align-items: center; gap: 0.7rem !important; }
+      .hero-cta-wrap .button { width: 100%; max-width: 300px; justify-content: center; font-size: 0.97rem !important; }
+      .avatar { width: 76px !important; height: 76px !important; margin-top: 2rem !important; }
+
+      .section.is-primary { padding-top: 4rem !important; padding-bottom: 4rem !important; }
+      .section.is-primary h1.title { font-size: 1.5rem !important; }
+
+      .skills { padding-top: 4rem !important; padding-bottom: 4rem !important; }
+      .skills .box { padding: 2.5rem 1.5rem !important; }
+      .skills .column { padding: 1.5rem 1.25rem !important; }
+
+      .section.projects { padding-top: 4.5rem !important; padding-bottom: 4.5rem !important; }
+      .proj-section-title { font-size: 1.65rem !important; }
+      .proj-filter-shell { gap: 0.35rem !important; margin-bottom: 2.25rem !important; }
+      .proj-filter-btn { font-size: 0.8rem !important; padding: 0.42rem 0.95rem !important; }
+      .project-card-body { padding: 1.35rem 1.4rem 1.6rem !important; }
+
+      #how-i-work { padding-top: 4.5rem !important; padding-bottom: 4.5rem !important; }
+      .hiw-steps-wrapper { gap: 1.25rem !important; }
+      .how-i-work-step { padding: 2rem 1.5rem !important; }
+
+      .section.testimonials { padding-top: 4.5rem !important; padding-bottom: 4.5rem !important; }
+      .testimonial-card { padding: 2rem 1.5rem !important; }
+      .testimonial-quote p { font-size: 0.97rem !important; }
+
+      #cta-new { padding: 5rem 1.25rem !important; }
+    }
+
+    @media (max-width: 480px) {
+      .proj-filter-shell { padding: 0.38rem !important; }
+      .see-more-btn { padding: 0.65rem 1.7rem !important; font-size: 0.88rem !important; }
+    }
+  </style>
+  <script src="https://kit.fontawesome.com/9bdc906322.js"></script>
+  <script async="" src="https://cdn.splitbee.io/sb.js"></script>
+  <style>
+    /* ── Testimonial Navigation ── */
+    .testimonial-slider-wrap { position: relative; }
+    .tnav-btn {
+      position: absolute; top: 50%; transform: translateY(-50%);
+      z-index: 10; background: #fff;
+      border: 1.5px solid rgba(110,7,243,0.18); border-radius: 50%;
+      width: 44px; height: 44px;
+      display: flex; align-items: center; justify-content: center;
+      cursor: pointer; color: #6E07F3;
+      box-shadow: 0 2px 12px rgba(110,7,243,0.12);
+      transition: background .2s, color .2s, box-shadow .2s, transform .2s;
+      outline: none;
+    }
+    .tnav-btn:hover {
+      background: #6E07F3; color: #fff;
+      box-shadow: 0 4px 18px rgba(110,7,243,0.28);
+      transform: translateY(-50%) scale(1.08);
+    }
+    .tnav-btn.prev { left: -22px; }
+    .tnav-btn.next { right: -22px; }
+    @media (max-width: 480px) {
+      .tnav-btn { width: 36px; height: 36px; }
+      .tnav-btn.prev { left: 0; }
+      .tnav-btn.next { right: 0; }
+    }
+    .testimonial-dots {
+      display: flex; justify-content: center; gap: 8px; margin-top: 1.75rem;
+    }
+    .testimonial-dot {
+      width: 8px; height: 8px; border-radius: 50%;
+      background: rgba(110,7,243,0.2);
+      border: none; padding: 0; cursor: pointer;
+      transition: background .25s, transform .25s;
+    }
+    .testimonial-dot.is-active { background: #6E07F3; transform: scale(1.35); }
+    @keyframes tSlideIn {
+      from { opacity: 0; transform: translateY(18px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+    .testimonial-slide.is-animating { animation: tSlideIn 0.38s cubic-bezier(.22,.68,0,1.1) both; }
+
+    /* ── Scroll Reveal ── */
+    .reveal {
+      opacity: 0; transform: translateY(28px);
+      transition: opacity .65s cubic-bezier(.22,.68,0,1), transform .65s cubic-bezier(.22,.68,0,1);
+    }
+    .reveal.is-visible { opacity: 1; transform: translateY(0); }
+    .reveal-d1 { transition-delay: 0.10s; }
+    .reveal-d2 { transition-delay: 0.20s; }
+    .reveal-d3 { transition-delay: 0.30s; }
+
+    /* ── Navbar scroll shadow ── */
+    .navbar.is-scrolled { box-shadow: 0 2px 20px rgba(20,28,58,0.10) !important; }
+  </style>
+
+  <!-- ═══════════════════════════════════════════════════════
+       RESPONSIVE FIX PASS — properly scoped by breakpoint
+  ═══════════════════════════════════════════════════════ -->
+  <style>
+
+    /* ─────────────────────────────────────────────
+       BASE (applies to all viewports)
+    ───────────────────────────────────────────── */
+
+    /* Navbar */
+    .navbar.is-transparent {
+      padding-top: 0.6rem !important;
+      padding-bottom: 0.6rem !important;
+    }
+    .navbar-brand img {
+      height: 52px !important;
+      max-height: 52px !important;
+      width: auto !important;
+    }
+
+    /* Typography base */
+    p { line-height: 1.8; }
+    h1, h2, h3 { line-height: 1.22; }
+
+    /* Hero — base */
+    .hero.is-white { background: #fafafa; }
+    .hero h1.title {
+      font-weight: 900 !important;
+      letter-spacing: -0.028em !important;
+      color: #0d1224 !important;
+      line-height: 1.15 !important;
+    }
+    .hero h2.subtitle {
+      color: #5a6480 !important;
+      line-height: 1.8 !important;
+      font-weight: 400 !important;
+    }
+    .hero-cta-wrap {
+      display: flex !important;
+      flex-wrap: wrap !important;
+      justify-content: center !important;
+      margin-bottom: 1.75rem !important;
+    }
+    /* Primary CTA */
+    .hero-cta-wrap .button.is-primary {
+      font-weight: 700 !important;
+      border-radius: 50px !important;
+      background: #6E07F3 !important;
+      border-color: #6E07F3 !important;
+      box-shadow: 0 5px 18px rgba(110,7,243,0.30) !important;
+      letter-spacing: 0.01em !important;
+    }
+    .hero-cta-wrap .button.is-primary:hover {
+      background: #5800d4 !important;
+      border-color: #5800d4 !important;
+      box-shadow: 0 8px 26px rgba(110,7,243,0.42) !important;
+      transform: translateY(-2px) !important;
+    }
+    /* Secondary CTA */
+    .hero-secondary-btn {
+      font-weight: 600 !important;
+      border-radius: 50px !important;
+      border: 2px solid rgba(20,28,58,0.20) !important;
+      color: #0d1224 !important;
+      background: transparent !important;
+      display: inline-flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+    }
+    .hero-secondary-btn:hover {
+      background: #111 !important;
+      color: #fff !important;
+      border-color: #111 !important;
+    }
+    /* Trust badges */
+    .hero-trust-badges span {
+      font-size: 0.83rem !important;
+      color: #8896a6 !important;
+    }
+    /* Avatar */
+    .avatar {
+      border: 3px solid #ede8fe !important;
+      box-shadow: 0 5px 22px rgba(110,7,243,0.15) !important;
+    }
+
+    /* Section headings */
+    .section h1.title.is-spaced {
+      font-weight: 900 !important;
+      letter-spacing: -0.025em !important;
+    }
+    .section h2.subtitle.has-text-weight-normal {
+      line-height: 1.8 !important;
+      color: #6b7a99 !important;
+    }
+
+    /* Purple section — base */
+    .section.is-primary { margin-top: 0 !important; }
+    .section.is-primary h1.title {
+      font-weight: 900 !important;
+      line-height: 1.22 !important;
+      letter-spacing: -0.02em !important;
+      color: #fff !important;
+    }
+    .section.is-primary h2.subtitle {
+      line-height: 2 !important;
+      color: #fff !important;
+      opacity: 1 !important;
+      font-weight: 400 !important;
+    }
+
+    /* Service cards — base */
+    .skills .box {
+      border-radius: 22px !important;
+      box-shadow: 0 4px 32px rgba(110,7,243,0.08), 0 0 0 1.5px rgba(110,7,243,0.06) !important;
+    }
+    .skills .column {
+      border-radius: 14px !important;
+      transition: background .2s, box-shadow .22s, transform .22s !important;
+    }
+    .skills .column:hover {
+      background: rgba(110,7,243,0.04) !important;
+      box-shadow: 0 8px 26px rgba(110,7,243,0.11) !important;
+      transform: translateY(-5px) !important;
+    }
+    .skills .column h1.title {
+      font-weight: 900 !important;
+      color: #0d1224 !important;
+      letter-spacing: -0.01em !important;
+      line-height: 1.28 !important;
+    }
+    .skills .column p {
+      color: #5a6480 !important;
+      line-height: 1.82 !important;
+    }
+    .skills .column p strong {
+      color: #0d1224 !important;
+      font-weight: 700 !important;
+      display: block;
+      margin-bottom: 0.18rem;
+    }
+
+    /* Project cards — base */
+    .project-card {
+      border-radius: 18px !important;
+      border: 1.5px solid rgba(20,28,58,0.05) !important;
+      box-shadow: 0 2px 10px rgba(20,28,58,0.06), 0 5px 24px rgba(20,28,58,0.07) !important;
+      transition: box-shadow .28s ease, transform .28s ease, border-color .28s ease !important;
+    }
+    .project-card:hover {
+      box-shadow: 0 8px 36px rgba(20,28,58,0.13), 0 2px 8px rgba(110,7,243,0.07) !important;
+      transform: translateY(-5px) !important;
+      border-color: rgba(110,7,243,0.12) !important;
+    }
+    .project-result-tag {
+      font-size: 0.82rem !important;
+      font-weight: 700 !important;
+      padding: 0.48rem 0.95rem !important;
+      border-radius: 7px !important;
+      border-left-width: 3px !important;
+      background: rgba(110,7,243,0.07) !important;
+      color: #5000c0 !important;
+    }
+    .project-live-btn {
+      border-radius: 50px !important;
+      font-size: 0.86rem !important;
+      font-weight: 700 !important;
+      gap: 0.42rem !important;
+      box-shadow: 0 3px 12px rgba(110,7,243,0.22) !important;
+    }
+
+    /* Filter pills — base */
+    .proj-filter-btn {
+      font-weight: 600 !important;
+    }
+    .proj-filter-btn.is-active {
+      box-shadow: 0 3px 13px rgba(110,7,243,0.24) !important;
+    }
+
+    /* How I Work — base */
+    #how-i-work { background: #f7f5ff; }
+    .how-i-work-step { text-align: center; }
+    .how-i-work-step h3.title {
+      font-weight: 800 !important;
+      line-height: 1.3 !important;
+    }
+
+    /* Testimonials — base */
+    .section.testimonials { background: #fdfdff !important; }
+    .testimonial-quote p { line-height: 1.85 !important; }
+
+    /* WhatsApp */
+    #whatsapp-float {
+      bottom: 1.5rem !important;
+      right: 1.5rem !important;
+    }
+
+    /* ─────────────────────────────────────────────
+       DESKTOP (≥ 1025px) — full layout, premium scale
+    ───────────────────────────────────────────── */
+    @media (min-width: 1025px) {
+
+      /* ── 1. NAVBAR ── */
+      .navbar-brand img { height: 60px !important; max-height: 60px !important; }
+      .navbar.is-transparent { padding-top: 0.85rem !important; padding-bottom: 0.85rem !important; }
+      .navbar-end .navbar-item {
+        padding: 0.6rem 1.1rem !important;
+        font-size: 0.96rem !important;
+        font-weight: 500 !important;
+      }
+      .navbar-end .navbar-item .button {
+        padding: 0.6rem 1.55rem !important;
+        font-size: 0.93rem !important;
+        font-weight: 700 !important;
+        border-radius: 50px !important;
+      }
+
+      /* ── 2-7. HERO ── */
+      .hero .hero-body {
+        padding-top: 8.5rem !important;
+        padding-bottom: 6.5rem !important;
+      }
+      /* Heading — bigger, bolder, commanding */
+      .hero h1.title {
+        font-size: 3.5rem !important;
+        line-height: 1.12 !important;
+        margin-bottom: 1.85rem !important;
+        max-width: 800px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+      /* Subheading — clearly readable */
+      .hero h2.subtitle {
+        font-size: 1.25rem !important;
+        line-height: 1.78 !important;
+        margin-bottom: 2.85rem !important;
+        max-width: 600px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+      /* CTA buttons — side by side, premium size */
+      .hero-cta-wrap {
+        flex-direction: row !important;
+        gap: 1.1rem !important;
+        margin-bottom: 2.25rem !important;
+      }
+      .hero-cta-wrap .button { width: auto !important; }
+      .hero-cta-wrap .button.is-primary {
+        padding: 1.05rem 2.85rem !important;
+        font-size: 1.07rem !important;
+        font-weight: 700 !important;
+        letter-spacing: 0.01em !important;
+      }
+      .hero-secondary-btn {
+        padding: 1.05rem 2.5rem !important;
+        font-size: 1.07rem !important;
+        font-weight: 600 !important;
+      }
+      /* Trust badges — visible and credible */
+      .hero-trust-badges {
+        gap: 0.6rem 2rem !important;
+        margin-top: 1rem !important;
+      }
+      .hero-trust-badges span {
+        font-size: 0.9rem !important;
+        color: #7a8699 !important;
+        gap: 0.5rem !important;
+      }
+      /* Profile avatar — intentional, connected */
+      .avatar {
+        width: 108px !important;
+        height: 108px !important;
+        margin-top: 4rem !important;
+        margin-bottom: 0.25rem !important;
+      }
+
+      /* ── 8. PURPLE ABOUT SECTION ── */
+      .section.is-medium.is-primary {
+        padding-top: 8rem !important;
+        padding-bottom: 8rem !important;
+      }
+      .section.is-primary h1.title {
+        font-size: 2.35rem !important;
+        margin-bottom: 1.6rem !important;
+      }
+      .section.is-primary h2.subtitle {
+        font-size: 1.14rem !important;
+        line-height: 2.05 !important;
+        max-width: 580px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      /* ── 11. STATS in purple section ── */
+      .section.is-primary [style*="font-size:2rem"] {
+        font-size: 2.6rem !important;
+      }
+
+      /* ── 9. GLOBAL SECTION SPACING ── */
+      .section.is-medium { padding-top: 8rem !important; padding-bottom: 8rem !important; }
+      .section h1.title.is-spaced { margin-bottom: 1.1rem !important; }
+      .section h2.subtitle.has-text-weight-normal {
+        font-size: 1.1rem !important;
+        line-height: 1.82 !important;
+        margin-bottom: 3.25rem !important;
+      }
+
+      /* ── 10 & 12. SERVICES ── */
+      .section.skills { padding-top: 8rem !important; padding-bottom: 8rem !important; }
+      .skills .box { padding: 4rem 2.75rem !important; }
+      .skills .columns {
+        display: flex !important;
+        flex-direction: row !important;
+        flex-wrap: nowrap !important;
+        gap: 0 !important;
+      }
+      .skills .column {
+        flex: 1 !important;
+        padding: 2.5rem 2rem !important;
+      }
+      .skills .fa-stack { margin-bottom: 1.6rem !important; font-size: 2.2em !important; }
+      .skills .column h1.title {
+        font-size: 1.2rem !important;
+        margin-bottom: 0.8rem !important;
+        line-height: 1.3 !important;
+      }
+      .skills .column p { font-size: 0.94rem !important; line-height: 1.85 !important; }
+
+      /* ── 13. PROJECTS SECTION ── */
+      .section.projects {
+        padding-top: 8rem !important;
+        padding-bottom: 8rem !important;
+        background: #f5f4fc !important;
+      }
+      .proj-section-badge {
+        font-size: 0.75rem !important;
+        padding: 0.4rem 1.4rem !important;
+        margin-bottom: 1.6rem !important;
+      }
+      .proj-section-title {
+        font-size: 2.4rem !important;
+        margin-bottom: 1.1rem !important;
+      }
+      .proj-section-sub {
+        font-size: 1.08rem !important;
+        line-height: 1.82 !important;
+      }
+      .proj-accent-rule { margin: 2rem auto 3.5rem !important; }
+
+      /* ── 14. FILTER BUTTONS ── */
+      .proj-filter-shell {
+        padding: 0.5rem 0.65rem !important;
+        gap: 0.44rem !important;
+        margin-bottom: 3.75rem !important;
+        flex-wrap: nowrap !important;
+      }
+      .proj-filter-btn {
+        padding: 0.62rem 1.55rem !important;
+        font-size: 0.92rem !important;
+        font-weight: 600 !important;
+        letter-spacing: 0.005em !important;
+      }
+
+      /* ── 15. PROJECT CARDS ── */
+      #proj-columns.columns.is-multiline { row-gap: 2.25rem !important; }
+      .proj-item.column { padding: 0.75rem !important; }
+      .project-card-body {
+        padding: 2rem 1.85rem 2.15rem !important;
+      }
+      .project-category {
+        font-size: 0.73rem !important;
+        letter-spacing: 0.14em !important;
+        margin-bottom: 0.7rem !important;
+      }
+      .project-card-body h3.title {
+        font-size: 1.18rem !important;
+        font-weight: 800 !important;
+        line-height: 1.27 !important;
+        margin-bottom: 0.65rem !important;
+      }
+      .project-card-body .has-text-grey {
+        font-size: 0.9rem !important;
+        line-height: 1.78 !important;
+        margin-bottom: 1.1rem !important;
+      }
+      .project-result-tag {
+        font-size: 0.85rem !important;
+        padding: 0.55rem 1.1rem !important;
+        margin-bottom: 1.35rem !important;
+      }
+      .project-live-btn {
+        padding: 0.65rem 1.5rem !important;
+        font-size: 0.9rem !important;
+        margin-top: 0.35rem !important;
+      }
+
+      /* ── 16. VIEW ALL BUTTON ── */
+      .see-more-wrap { margin-top: 3.5rem !important; justify-content: center !important; }
+      .see-more-btn {
+        padding: 0.88rem 2.6rem !important;
+        font-size: 1rem !important;
+        font-weight: 700 !important;
+        border-radius: 50px !important;
+        border-width: 2px !important;
+      }
+
+      /* ── HOW I WORK ── */
+      #how-i-work { padding-top: 8rem !important; padding-bottom: 8rem !important; }
+      .hiw-steps-wrapper {
+        display: flex !important;
+        flex-direction: row !important;
+        gap: 2.25rem !important;
+        margin-top: 4.25rem !important;
+        align-items: stretch !important;
+      }
+      .how-i-work-step {
+        flex: 1 !important;
+        padding: 3rem 2rem 2.75rem !important;
+      }
+      .how-i-work-step-icon {
+        width: 90px !important;
+        height: 90px !important;
+        margin-bottom: 1.75rem !important;
+      }
+      .how-i-work-step-icon svg {
+        width: 46px !important;
+        height: 46px !important;
+      }
+      .how-i-work-step .step-num {
+        font-size: 0.78rem !important;
+        margin-bottom: 0.5rem !important;
+      }
+      .how-i-work-step h3.title {
+        font-size: 1.12rem !important;
+        margin-bottom: 0.7rem !important;
+      }
+      .how-i-work-step .has-text-grey { font-size: 0.93rem !important; line-height: 1.78 !important; }
+
+      /* ── TESTIMONIALS ── */
+      .section.testimonials { padding-top: 8rem !important; padding-bottom: 8rem !important; }
+      .testimonial-card {
+        padding: 3.25rem 3rem !important;
+        border-radius: 22px !important;
+      }
+      .testimonial-stars { font-size: 1.3rem !important; letter-spacing: 3px !important; }
+      .testimonial-quote p { font-size: 1.12rem !important; line-height: 1.88 !important; }
+      .testimonial-name { font-size: 1.02rem !important; }
+
+      /* ── WhatsApp ── */
+      #whatsapp-float { width: 62px !important; height: 62px !important; }
+    }
+
+    /* ─────────────────────────────────────────────
+       TABLET (769px – 1024px)
+    ───────────────────────────────────────────── */
+    @media (min-width: 769px) and (max-width: 1024px) {
+      .hero .hero-body { padding-top: 5.5rem !important; padding-bottom: 4.5rem !important; }
+      .hero h1.title { font-size: 2.4rem !important; margin-bottom: 1.4rem !important; }
+      .hero h2.subtitle { font-size: 1.08rem !important; margin-bottom: 2.25rem !important; }
+      .hero-cta-wrap { flex-direction: row !important; gap: 0.85rem !important; }
+      .hero-cta-wrap .button { width: auto !important; }
+      .hero-cta-wrap .button.is-primary { padding: 0.85rem 2.1rem !important; font-size: 0.97rem !important; }
+      .hero-secondary-btn { padding: 0.85rem 1.9rem !important; font-size: 0.97rem !important; }
+
+      .section.is-medium { padding-top: 5.5rem !important; padding-bottom: 5.5rem !important; }
+      .section.is-medium.is-primary { padding-top: 5.5rem !important; padding-bottom: 5.5rem !important; }
+      .section.skills { padding-top: 5.5rem !important; padding-bottom: 5.5rem !important; }
+      .skills .box { padding: 2.75rem 1.75rem !important; }
+      .skills .columns { display: flex !important; flex-direction: row !important; flex-wrap: wrap !important; }
+      .skills .column { flex: 0 0 50% !important; max-width: 50% !important; padding: 1.75rem 1.5rem !important; }
+
+      .section.projects { padding-top: 5.5rem !important; padding-bottom: 5.5rem !important; }
+      .proj-filter-shell { flex-wrap: wrap !important; gap: 0.4rem !important; }
+
+      #how-i-work { padding-top: 5.5rem !important; padding-bottom: 5.5rem !important; }
+      .hiw-steps-wrapper { display: flex !important; flex-direction: row !important; gap: 1.25rem !important; }
+      .how-i-work-step { flex: 1 !important; padding: 2rem 1.25rem !important; }
+
+      .section.testimonials { padding-top: 5.5rem !important; padding-bottom: 5.5rem !important; }
+      .testimonial-card { padding: 2.5rem 2rem !important; }
+    }
+
+    /* ─────────────────────────────────────────────
+       MOBILE (≤ 768px)
+    ───────────────────────────────────────────── */
+    @media (max-width: 768px) {
+      /* Navbar */
+      .navbar.is-transparent { padding: 0.45rem 0 !important; }
+      .navbar-brand img { height: 44px !important; max-height: 44px !important; }
+
+      /* Hero */
+      .hero .hero-body { padding-top: 4.5rem !important; padding-bottom: 3.75rem !important; }
+      .hero h1.title { font-size: 1.85rem !important; margin-bottom: 1.2rem !important; }
+      .hero h2.subtitle { font-size: 1rem !important; margin-bottom: 2rem !important; padding: 0 0.5rem; }
+      .hero-cta-wrap { flex-direction: column !important; align-items: center !important; gap: 0.8rem !important; margin-bottom: 1.5rem !important; }
+      .hero-cta-wrap .button { width: 100% !important; max-width: 300px !important; min-width: unset !important; justify-content: center !important; font-size: 0.97rem !important; padding: 0.85rem 1.5rem !important; }
+      .hero-trust-badges { gap: 0.45rem 1rem !important; }
+      .avatar { width: 80px !important; height: 80px !important; margin-top: 2.5rem !important; }
+
+      /* Purple section */
+      .section.is-medium.is-primary { padding-top: 4.5rem !important; padding-bottom: 4.5rem !important; }
+      .section.is-primary h1.title { font-size: 1.6rem !important; margin-bottom: 1.1rem !important; }
+      .section.is-primary h2.subtitle { font-size: 0.97rem !important; line-height: 1.88 !important; }
+
+      /* Services */
+      .section.skills { padding-top: 4.5rem !important; padding-bottom: 4.5rem !important; }
+      .skills .box { padding: 2rem 1.1rem !important; border-radius: 16px !important; }
+      .skills .columns { display: flex !important; flex-direction: column !important; gap: 0 !important; }
+      .skills .column { padding: 1.65rem 1.1rem !important; width: 100% !important; }
+      .skills .column h1.title { font-size: 1.04rem !important; margin-bottom: 0.55rem !important; }
+      .skills .column p { font-size: 0.9rem !important; }
+
+      /* Global */
+      .section.is-medium { padding-top: 4.5rem !important; padding-bottom: 4.5rem !important; }
+      .section h2.subtitle.has-text-weight-normal { font-size: 0.97rem !important; margin-bottom: 2.25rem !important; }
+
+      /* Projects */
+      .section.projects { padding-top: 4.5rem !important; padding-bottom: 4.5rem !important; }
+      .proj-filter-shell { flex-wrap: wrap !important; padding: 0.4rem !important; gap: 0.35rem !important; margin-bottom: 2.5rem !important; border-radius: 16px !important; }
+      .proj-filter-btn { font-size: 0.81rem !important; padding: 0.45rem 0.95rem !important; }
+      #proj-columns.columns.is-multiline { row-gap: 1.35rem !important; }
+      .proj-item.column { padding: 0.4rem !important; }
+      .project-card-body { padding: 1.4rem 1.25rem 1.55rem !important; }
+      .project-card-body h3.title { font-size: 1.02rem !important; }
+
+      /* View All */
+      .see-more-wrap { margin-top: 2.25rem !important; }
+      .see-more-btn { font-size: 0.9rem !important; padding: 0.7rem 1.85rem !important; }
+
+      /* How I Work */
+      #how-i-work { padding-top: 4.5rem !important; padding-bottom: 4.5rem !important; }
+      .hiw-steps-wrapper { flex-direction: column !important; gap: 1.1rem !important; margin-top: 2.5rem !important; }
+      .how-i-work-step { padding: 1.85rem 1.35rem !important; }
+
+      /* Testimonials */
+      .section.testimonials { padding-top: 4.5rem !important; padding-bottom: 4.5rem !important; }
+      .testimonial-card { padding: 2rem 1.4rem !important; border-radius: 16px !important; }
+      .testimonial-quote p { font-size: 0.97rem !important; }
+
+      /* WhatsApp */
+      #whatsapp-float { bottom: 1rem !important; right: 1rem !important; width: 52px !important; height: 52px !important; }
+    }
+
+    /* ─────────────────────────────────────────────
+       SMALL PHONE (≤ 480px)
+    ───────────────────────────────────────────── */
+    @media (max-width: 480px) {
+      .hero h1.title { font-size: 1.6rem !important; }
+      .hero h2.subtitle { font-size: 0.94rem !important; }
+      .hero-trust-badges span { font-size: 0.77rem !important; }
+      .skills .box { padding: 1.65rem 0.9rem !important; }
+      .skills .column { padding: 1.4rem 1rem !important; }
+      .proj-filter-shell { padding: 0.32rem !important; }
+      .proj-filter-btn { font-size: 0.78rem !important; padding: 0.4rem 0.8rem !important; }
+      .testimonial-card { padding: 1.65rem 1rem !important; }
+      .tnav-btn { display: none !important; }
+      .how-i-work-step { padding: 1.6rem 1.1rem !important; }
+    }
+  </style>
+</head>
+
+<body>
+  <nav class="navbar is-transparent" role="navigation" aria-label="main navigation">
+    <div class="container">
+      <div class="navbar-brand"><a class='navbar-item' href='index.html'><img src="img/mk-logo.svg"
+            alt="Manish Barakoti" style="height:48px;max-height:48px;width:auto;display:block;"></a><a
+          class="navbar-burger" role="button" aria-label="menu" aria-expanded="false" data-target="#navMenu"><span
+            aria-hidden="true"></span><span aria-hidden="true"></span><span aria-hidden="true"></span></a></div>
+      <div class="navbar-menu is-shadowless" id="navMenu">
+        <div class="navbar-start"></div>
+        <div class="navbar-end"><a class="navbar-item has-text-weight-normal" href="#services">Services</a><a
+            class="navbar-item has-text-weight-normal" href="#portfolio">Projects</a>
+          <div class="navbar-item"><a
+              class='button is-primary is-outlined is-rounded has-text-weight-normal'
+              href='contact.html'>Contact</a></div>
+        </div>
+      </div>
+    </div>
+  </nav>
+  <section class="hero is-white has-text-centered">
+    <div class="hero-body" style="padding-top:4.5rem;padding-bottom:4.5rem;">
+      <div class="container">
+        <div class="columns is-centered">
+          <div class="column is-four-fifths-desktop">
+            <h1 class="title is-spaced is-size-1-desktop is-size-2-tablet is-size-3-mobile" style="line-height:1.18;margin-bottom:1.75rem;">I help local businesses get more calls, leads, and customers with high-converting websites.</h1>
+            <h2 class="subtitle is-size-4-tablet" style="margin-bottom:2.75rem;color:#5a6480;line-height:1.75;">Fast, modern websites designed to turn visitors into real enquiries &mdash; not just traffic.</h2>
+            <!-- Hero CTA -->
+            <div class="buttons is-centered hero-cta-wrap" style="gap:0.75rem;flex-wrap:wrap;">
+              <a class='button is-primary is-rounded is-medium has-text-weight-semibold' href='contact.html' style="padding-left:2.25rem;padding-right:2.25rem;padding-top:0.8rem;padding-bottom:0.8rem;">Get Your Website</a>
+              <a class="button is-rounded is-medium hero-secondary-btn" href="#portfolio" id="hero-view-work-btn" style="padding-left:2rem;padding-right:2rem;padding-top:0.8rem;padding-bottom:0.8rem;">
+                View My Recent Work
+                <svg style="margin-left:0.45rem;flex-shrink:0;" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+              </a>
+            </div>
+            <!-- Trust badges -->
+            <div class="hero-trust-badges" style="display:flex;flex-wrap:wrap;justify-content:center;gap:0.65rem 1.75rem;margin-top:2rem;">
+              <span style="display:inline-flex;align-items:center;gap:0.5rem;font-size:0.88rem;color:#5a6480;font-weight:500;">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#22c55e" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                Trusted by local businesses
+              </span>
+              <span style="display:inline-flex;align-items:center;gap:0.5rem;font-size:0.88rem;color:#5a6480;font-weight:500;">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#22c55e" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                Free consultation
+              </span>
+              <span style="display:inline-flex;align-items:center;gap:0.5rem;font-size:0.88rem;color:#5a6480;font-weight:500;">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#22c55e" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                No long-term contracts
+              </span>
+            </div>
+            <img class="avatar" src="img/mk-avatar.jpg" alt="Manish Barakoti avatar" style="margin-top:2.5rem;">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="hero-foot">
+      <div class="container"><img class="is-bottom" src="img/hero-devices.svg"></div>
+    </div>
+  </section>
+  <section class="section is-medium is-primary has-text-centered is-long">
+    <div class="container">
+      <div class="columns is-centered">
+        <div class="column is-three-fifths reveal">
+          <h1 class="title is-spaced is-size-3-desktop is-size-4-mobile">Hi, I&#8217;m Manish.</h1>
+          <h2 class="subtitle is-size-5-desktop has-text-weight-normal" style="line-height:1.8;">
+            I&#8217;m a freelance web developer based in Dehradun.<br>
+            I build fast, modern websites for local businesses that actually bring in customers &#8212; not just traffic.
+          </h2>
+          <!-- Mini stats -->
+          <div style="display:flex;justify-content:center;gap:2.5rem;margin-top:2.25rem;flex-wrap:wrap;">
+            <div>
+              <span style="display:block;font-size:2rem;font-weight:800;color:#ffffff;line-height:1.1;letter-spacing:-0.03em;">5+</span>
+              <span style="font-size:0.8rem;color:rgba(255,255,255,0.75);font-weight:500;margin-top:0.25rem;display:block;">Live Projects</span>
+            </div>
+            <div>
+              <span style="display:block;font-size:2rem;font-weight:800;color:#ffffff;line-height:1.1;letter-spacing:-0.03em;">100%</span>
+              <span style="font-size:0.8rem;color:rgba(255,255,255,0.75);font-weight:500;margin-top:0.25rem;display:block;">Client Satisfaction</span>
+            </div>
+            <div>
+              <span style="display:block;font-size:2rem;font-weight:800;color:#ffffff;line-height:1.1;letter-spacing:-0.03em;">3 days</span>
+              <span style="font-size:0.8rem;color:rgba(255,255,255,0.75);font-weight:500;margin-top:0.25rem;display:block;">Avg. First Response</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="section skills has-text-centered" id="services">
+    <div class="container is-narrow">
+      <div class="box reveal">
+        <div class="content">
+          <div class="columns is-centered">
+            <div class="column reveal reveal-d1">
+              <span class="fa-stack fa-2x"><i class="fa-solid fa-circle fa-stack-2x has-text-success"></i><i class="fa-solid fa-code fa-stack-1x has-text-dark"></i></span>
+              <h1 class="title is-size-4 is-spaced">Web Development</h1>
+              <p><strong>Get a website that brings real enquiries.</strong><br>Fast, mobile-friendly websites built to convert every visitor into a potential customer.</p>
+            </div>
+            <div class="column reveal reveal-d2">
+              <span class="fa-stack fa-2x"><i class="fa-solid fa-circle fa-stack-2x has-text-success"></i><i class="fa-solid fa-magnifying-glass fa-stack-1x has-text-dark"></i></span>
+              <h1 class="title is-size-4 is-spaced">SEO</h1>
+              <p><strong>Rank on Google and get consistent leads.</strong><br>Show up at the top when local customers search &mdash; and turn that traffic into real business.</p>
+            </div>
+            <div class="column reveal reveal-d2">
+              <span class="fa-stack fa-2x"><i class="fa-solid fa-circle fa-stack-2x has-text-success"></i><i class="fa-solid fa-bullhorn fa-stack-1x has-text-dark"></i></span>
+              <h1 class="title is-size-4 is-spaced">Meta Ads</h1>
+              <p><strong>Get more calls and leads from paid ads.</strong><br>Targeted Facebook &amp; Instagram campaigns that drive real enquiries &mdash; not just likes and clicks.</p>
+            </div>
+            <div class="column reveal reveal-d3">
+              <span class="fa-stack fa-2x"><i class="fa-solid fa-circle fa-stack-2x has-text-success"></i><i class="fa-solid fa-shield fa-stack-1x has-text-dark"></i></span>
+              <h1 class="title is-size-4 is-spaced">Maintenance</h1>
+              <p><strong>Keep your website fast, secure, and running.</strong><br>I handle updates, backups &amp; performance &mdash; so you never lose a client to downtime.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="section projects is-medium has-text-centered" id="portfolio" style="background:#f8f7ff;">
+    <div class="container is-narrow">
+
+      <!-- Section badge -->
+      <div class="proj-section-badge reveal">Featured Work</div>
+
+      <!-- Heading -->
+      <h1 class="title proj-section-title reveal reveal-d1">
+        Projects That Deliver
+        <span class="proj-title-accent">Real Results</span>
+      </h1>
+      <p class="proj-section-sub">
+        Real businesses. Real clients. Real results &mdash; here&rsquo;s a selection of live websites I&rsquo;ve built.
+      </p>
+
+      <!-- Accent rule -->
+      <div class="proj-accent-rule"></div>
+
+      <!-- Category Filter Pill Group -->
+      <div class="proj-filter-shell" role="tablist" aria-label="Filter projects by category">
+        <button class="proj-filter-btn is-active" data-filter="all"          role="tab" aria-selected="true">All</button>
+        <button class="proj-filter-btn" data-filter="dental"       role="tab" aria-selected="false">Dental Clinic</button>
+        <button class="proj-filter-btn" data-filter="coaching"     role="tab" aria-selected="false">Coaching Academy</button>
+        <button class="proj-filter-btn" data-filter="photographer" role="tab" aria-selected="false">Photographer</button>
+        <button class="proj-filter-btn" data-filter="salon"        role="tab" aria-selected="false">Salon</button>
+      </div>
+
+
+      <!-- â”€â”€ Project Grid (all cards live here, JS shows/hides) â”€â”€ -->
+      <div class="project-grid" id="proj-grid">
+        <div class="columns is-multiline" id="proj-columns">
+
+          <!-- Project 1 Â· Dental Clinic -->
+          <div class="column is-12-mobile is-6-tablet is-6-desktop proj-item" data-category="dental">
+            <div class="project-card">
+              <figure class="image is-16by9">
+                <img class="project-thumb" src="img/project2.png" alt="Dr Navneet Singh Chauhan website screenshot">
+                <div class="overlay"></div>
+                <figcaption>
+                  <a class="project-overlay-btn" href="https://drnavneetsinghchauhan.rf.gd/" target="_blank" rel="noopener">
+                    <span class="icon"><i class="fa-regular fa-arrow-up-right-from-square"></i></span>
+                    <span>View Live Site</span>
+                  </a>
+                </figcaption>
+              </figure>
+              <div class="project-card-body">
+                <span class="project-category">Dental Clinic Website</span>
+                <h3 class="title is-size-5 is-size-4-widescreen">Dr Navneet Singh Chauhan</h3>
+                <p class="has-text-grey">No online presence &#8212; needed a professional site to get more patients.</p>
+                <p class="project-result-tag">&#10003; Started receiving patient enquiries within weeks of launch</p>
+                <a class="project-live-btn" href="https://drnavneetsinghchauhan.rf.gd/" target="_blank" rel="noopener">
+                  <span class="icon"><i class="fa-regular fa-arrow-up-right-from-square"></i></span>
+                  <span>View Case Study</span>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 2 Â· Coaching Academy -->
+          <div class="column is-12-mobile is-6-tablet is-6-desktop proj-item" data-category="coaching">
+            <div class="project-card">
+              <figure class="image is-16by9">
+                <img class="project-thumb" src="img/project5.png" alt="Mentors Doon Defence Institute website screenshot">
+                <div class="overlay"></div>
+                <figcaption>
+                  <a class="project-overlay-btn" href="https://mentorsdoon.in/" target="_blank" rel="noopener">
+                    <span class="icon"><i class="fa-regular fa-arrow-up-right-from-square"></i></span>
+                    <span>View Live Site</span>
+                  </a>
+                </figcaption>
+              </figure>
+              <div class="project-card-body">
+                <span class="project-category">Defence Coaching Institute</span>
+                <h3 class="title is-size-5 is-size-4-widescreen">Mentors Defence Institute</h3>
+                <p class="has-text-grey">A Dehradun-based defence coaching institute needed a professional web presence to reach more aspirants for NDA, CDS &amp; SSB prep.</p>
+                <p class="project-result-tag">&#10003; Student enquiries increased significantly after launch</p>
+                <a class="project-live-btn" href="https://mentorsdoon.in/" target="_blank" rel="noopener">
+                  <span class="icon"><i class="fa-regular fa-arrow-up-right-from-square"></i></span>
+                  <span>View Case Study</span>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 3 Â· Photographer -->
+          <div class="column is-12-mobile is-6-tablet is-6-desktop proj-item" data-category="photographer">
+            <div class="project-card">
+              <figure class="image is-16by9">
+                <img class="project-thumb" src="img/project6.png" alt="Video Crafts India website screenshot">
+                <div class="overlay"></div>
+                <figcaption>
+                  <a class="project-overlay-btn" href="https://www.videocraftsindia.com/" target="_blank" rel="noopener">
+                    <span class="icon"><i class="fa-regular fa-arrow-up-right-from-square"></i></span>
+                    <span>View Live Site</span>
+                  </a>
+                </figcaption>
+              </figure>
+              <div class="project-card-body">
+                <span class="project-category">Wedding Photography &amp; Videography</span>
+                <h3 class="title is-size-5 is-size-4-widescreen">Video Crafts India</h3>
+                <p class="has-text-grey">A Chandigarh-based wedding photography studio needed a premium website to showcase their work and attract more bookings.</p>
+                <p class="project-result-tag">&#10003; More wedding booking enquiries within 30 days</p>
+                <a class="project-live-btn" href="https://www.videocraftsindia.com/" target="_blank" rel="noopener">
+                  <span class="icon"><i class="fa-regular fa-arrow-up-right-from-square"></i></span>
+                  <span>View Case Study</span>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 4 Â· Photographer -->
+          <div class="column is-12-mobile is-6-tablet is-6-desktop proj-item" data-category="photographer">
+            <div class="project-card">
+              <figure class="image is-16by9">
+                <img class="project-thumb" src="img/project7.png" alt="Cinestyle India website screenshot">
+                <div class="overlay"></div>
+                <figcaption>
+                  <a class="project-overlay-btn" href="https://www.cinestyleindia.in/" target="_blank" rel="noopener">
+                    <span class="icon"><i class="fa-regular fa-arrow-up-right-from-square"></i></span>
+                    <span>View Live Site</span>
+                  </a>
+                </figcaption>
+              </figure>
+              <div class="project-card-body">
+                <span class="project-category">Wedding Cinematography</span>
+                <h3 class="title is-size-5 is-size-4-widescreen">Cinestyle India</h3>
+                <p class="has-text-grey">A wedding cinematography brand wanted a cinematic website to match their high-end visual storytelling and attract premium clients.</p>
+                <p class="project-result-tag">&#10003; Premium client bookings increased after relaunch</p>
+                <a class="project-live-btn" href="https://www.cinestyleindia.in/" target="_blank" rel="noopener">
+                  <span class="icon"><i class="fa-regular fa-arrow-up-right-from-square"></i></span>
+                  <span>View Case Study</span>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 5 Â· Photographer -->
+          <div class="column is-12-mobile is-6-tablet is-6-desktop proj-item" data-category="photographer">
+            <div class="project-card">
+              <figure class="image is-16by9">
+                <img class="project-thumb" src="img/project8.png" alt="3Plens Perfect Pixels Production website screenshot">
+                <div class="overlay"></div>
+                <figcaption>
+                  <a class="project-overlay-btn" href="https://3plens.com/" target="_blank" rel="noopener">
+                    <span class="icon"><i class="fa-regular fa-arrow-up-right-from-square"></i></span>
+                    <span>View Live Site</span>
+                  </a>
+                </figcaption>
+              </figure>
+              <div class="project-card-body">
+                <span class="project-category">Photography &amp; Cinematography</span>
+                <h3 class="title is-size-5 is-size-4-widescreen">Perfect Pixels Production</h3>
+                <p class="has-text-grey">A photography and cinematography studio needed a modern, visually immersive website to showcase weddings, lifestyle &amp; corporate shoots.</p>
+                <p class="project-result-tag">&#10003; Generated consistent online leads from new clients</p>
+                <a class="project-live-btn" href="https://3plens.com/" target="_blank" rel="noopener">
+                  <span class="icon"><i class="fa-regular fa-arrow-up-right-from-square"></i></span>
+                  <span>View Case Study</span>
+                </a>
+              </div>
+            </div>
+          </div>
+
+        </div><!-- /columns -->
+
+        <!-- Empty state (shown when a category has 0 projects) -->
+        <div id="proj-empty" style="display:none;padding:3rem 0;">
+          <p style="color:#aaa;font-size:1rem;">No projects in this category yet â€” check back soon!</p>
+        </div>
+
+      </div><!-- /project-grid -->
+
+      <!-- View All Projects button (shown when filtered count > 4) -->
+      <div class="see-more-wrap" id="view-all-wrap" style="display:none;">
+        <button id="view-all-btn" class="see-more-btn" aria-expanded="false">
+          <span class="see-more-label">View All Projects</span>
+          <svg class="see-more-chevron" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+        </button>
+      </div>
+
+    </div><!-- /container -->
+  </section>
+
+  <style>
+    /* == Premium Projects Section == */
+    /* Section badge */
+    .proj-section-badge {
+      display: inline-block;
+      background: rgba(110,7,243,0.09);
+      color: #6E07F3;
+      border: 1px solid rgba(110,7,243,0.18);
+      border-radius: 50px;
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      padding: 0.32rem 1.1rem;
+      margin-bottom: 1.2rem;
+    }
+    /* Section heading */
+    .proj-section-title {
+      font-size: 2.4rem;
+      font-weight: 800;
+      line-height: 1.2;
+      color: #141c3a;
+      margin-bottom: 1rem !important;
+    }
+    @media (max-width: 768px) { .proj-section-title { font-size: 1.75rem; } }
+    .proj-title-accent {
+      display: block;
+      background: linear-gradient(90deg, #6E07F3 0%, #a855f7 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    /* Subtitle */
+    .proj-section-sub {
+      color: #666;
+      font-size: 1rem;
+      line-height: 1.7;
+      max-width: 520px;
+      margin: 0 auto 0;
+    }
+    /* Accent rule */
+    .proj-accent-rule {
+      width: 48px;
+      height: 4px;
+      background: linear-gradient(90deg, #6E07F3, #a855f7);
+      border-radius: 4px;
+      margin: 1.75rem auto 2.5rem;
+    }
+    /* Filter pill-group shell */
+    .proj-filter-shell {
+      display: inline-flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 0.5rem;
+      background: #ffffff;
+      border: 1px solid rgba(110,7,243,0.12);
+      border-radius: 60px;
+      padding: 0.45rem 0.55rem;
+      box-shadow: 0 2px 18px rgba(110,7,243,0.07);
+      margin-bottom: 3rem;
+    }
+    /* Filter buttons */
+    .proj-filter-btn {
+      background: transparent;
+      border: none;
+      color: #555;
+      border-radius: 50px;
+      padding: 0.45rem 1.15rem;
+      font-size: 0.87rem;
+      font-weight: 500;
+      cursor: pointer;
+      transition: background 0.2s, color 0.2s, box-shadow 0.2s, transform 0.15s;
+      white-space: nowrap;
+    }
+    .proj-filter-btn:hover {
+      color: #6E07F3;
+      background: rgba(110,7,243,0.06);
+      transform: translateY(-1px);
+    }
+    .proj-filter-btn.is-active {
+      background: #6E07F3;
+      color: #fff;
+      box-shadow: 0 4px 14px rgba(110,7,243,0.28);
+    }
+    @media (max-width: 620px) {
+      .proj-filter-shell { border-radius: 20px; padding: 0.4rem; }
+      .proj-filter-btn   { font-size: 0.82rem; padding: 0.42rem 0.9rem; }
+    }
+
+    /* â”€â”€ Project card fade animation â”€â”€ */
+    .proj-item {
+      transition: opacity 0.3s ease, transform 0.3s ease;
+    }
+    .proj-item.is-hidden-filter {
+      display: none !important;
+    }
+    .proj-item.proj-fade-in {
+      animation: projFadeIn 0.35s ease both;
+    }
+    @keyframes projFadeIn {
+      from { opacity: 0; transform: translateY(12px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    /* â”€â”€ See More / View All button â”€â”€ */
+    .see-more-wrap {
+      margin-top: 2.25rem;
+      display: flex;
+      justify-content: center;
+    }
+    .see-more-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: transparent;
+      border: 2px solid #6E07F3;
+      color: #6E07F3;
+      border-radius: 50px;
+      padding: 0.7rem 2rem;
+      font-size: 0.97rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background 0.2s ease, color 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
+      letter-spacing: 0.01em;
+    }
+    .see-more-btn:hover {
+      background: #6E07F3;
+      color: #fff;
+      box-shadow: 0 6px 22px rgba(110,7,243,0.22);
+      transform: translateY(-2px);
+    }
+    .see-more-chevron {
+      transition: transform 0.35s cubic-bezier(0.4,0,0.2,1);
+      flex-shrink: 0;
+    }
+    .see-more-btn[aria-expanded="true"] .see-more-chevron {
+      transform: rotate(180deg);
+    }
+
+    @media (max-width: 600px) {
+      .proj-filter-btn  { font-size: 0.82rem; padding: 0.4rem 0.9rem; }
+      .see-more-btn     { font-size: 0.9rem; padding: 0.65rem 1.6rem; }
+    }
+  </style>
+
+  <script>
+    (function () {
+      var MAX_VISIBLE = 4;
+      var currentFilter = 'all';
+      var showingAll = false;
+
+      var filterBtns  = document.querySelectorAll('.proj-filter-btn');
+      var items       = document.querySelectorAll('.proj-item');
+      var emptyState  = document.getElementById('proj-empty');
+      var viewAllWrap = document.getElementById('view-all-wrap');
+      var viewAllBtn  = document.getElementById('view-all-btn');
+
+      function applyFilter(filter) {
+        currentFilter = filter;
+        showingAll    = false;
+
+        // Update active button
+        filterBtns.forEach(function (b) {
+          var active = b.getAttribute('data-filter') === filter;
+          b.classList.toggle('is-active', active);
+          b.setAttribute('aria-selected', active ? 'true' : 'false');
+        });
+
+        // Collect matching items
+        var matching = [];
+        items.forEach(function (item) {
+          item.classList.remove('proj-fade-in');
+          if (filter === 'all' || item.getAttribute('data-category') === filter) {
+            matching.push(item);
+          }
+        });
+
+        // Show / hide items
+        var visibleCount = 0;
+        items.forEach(function (item) {
+          var inMatch  = matching.indexOf(item) !== -1;
+          var canShow  = inMatch && visibleCount < MAX_VISIBLE;
+          if (canShow) {
+            item.classList.remove('is-hidden-filter');
+            // stagger fade-in
+            (function (el, idx) {
+              setTimeout(function () { el.classList.add('proj-fade-in'); }, idx * 60);
+            })(item, visibleCount);
+            visibleCount++;
+          } else {
+            item.classList.add('is-hidden-filter');
+          }
+        });
+
+        // Empty state
+        emptyState.style.display = matching.length === 0 ? 'block' : 'none';
+
+        // View All button
+        if (matching.length > MAX_VISIBLE) {
+          viewAllWrap.style.display = 'flex';
+          viewAllBtn.setAttribute('aria-expanded', 'false');
+          viewAllBtn.querySelector('.see-more-label').textContent = 'View All Projects';
+        } else {
+          viewAllWrap.style.display = 'none';
+        }
+      }
+
+      // Filter button clicks
+      filterBtns.forEach(function (btn) {
+        btn.addEventListener('click', function () {
+          applyFilter(btn.getAttribute('data-filter'));
+        });
+      });
+
+      // View All toggle
+      viewAllBtn.addEventListener('click', function () {
+        showingAll = !showingAll;
+        var matching = [];
+        items.forEach(function (item) {
+          if (currentFilter === 'all' || item.getAttribute('data-category') === currentFilter) {
+            matching.push(item);
+          }
+        });
+
+        if (showingAll) {
+          var revealed = 0;
+          matching.forEach(function (item) {
+            if (item.classList.contains('is-hidden-filter')) {
+              item.classList.remove('is-hidden-filter');
+              item.classList.remove('proj-fade-in');
+              (function (el, idx) {
+                setTimeout(function () { el.classList.add('proj-fade-in'); }, idx * 60);
+              })(item, revealed);
+              revealed++;
+            }
+          });
+          viewAllBtn.setAttribute('aria-expanded', 'true');
+          viewAllBtn.querySelector('.see-more-label').textContent = 'Show Less';
+        } else {
+          // Collapse back to MAX_VISIBLE
+          var kept = 0;
+          matching.forEach(function (item) {
+            if (kept < MAX_VISIBLE) {
+              item.classList.remove('is-hidden-filter');
+              kept++;
+            } else {
+              item.classList.add('is-hidden-filter');
+            }
+          });
+          viewAllBtn.setAttribute('aria-expanded', 'false');
+          viewAllBtn.querySelector('.see-more-label').textContent = 'View All Projects';
+          document.getElementById('portfolio').scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      });
+
+      // Init â€” show All on load
+      applyFilter('all');
+    })();
+  </script>
+
+
+  <!-- How I Work Section -->
+  <section class="section is-medium has-text-centered" id="how-i-work">
+    <div class="container is-narrow">
+      <h1 class="title is-spaced is-size-3-desktop is-size-4-mobile reveal">How I Work</h1>
+      <h2 class="subtitle is-size-5-desktop has-text-weight-normal reveal reveal-d1">Simple, transparent, and stress-free &#8212; from first call to launch.</h2>
+      <div class="hiw-steps-wrapper">
+
+        <!-- Step 1: Understand -->
+        <div class="how-i-work-step reveal reveal-d1">
+          <div class="how-i-work-step-icon">
+            <!-- Chat / conversation icon -->
+            <svg xmlns="http://www.w3.org/2000/svg" width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="#6E07F3" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+            </svg>
+          </div>
+          <p class="step-num">Step 01</p>
+          <h3 class="title is-size-5" style="margin-bottom:0.65rem;">Understand</h3>
+          <p class="has-text-grey" style="font-size:0.93rem;line-height:1.65;">A quick call to understand your business, goals &amp; customers &#8212; no jargon, no pressure.</p>
+        </div>
+
+        <!-- Step 2: Design & Build -->
+        <div class="how-i-work-step reveal reveal-d2">
+          <div class="how-i-work-step-icon">
+            <!-- Laptop / code icon -->
+            <svg xmlns="http://www.w3.org/2000/svg" width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="#6E07F3" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="2" y="3" width="20" height="14" rx="2" ry="2"/>
+              <line x1="8" y1="21" x2="16" y2="21"/>
+              <line x1="12" y1="17" x2="12" y2="21"/>
+              <polyline points="9 9 12 12 15 9"/>
+            </svg>
+          </div>
+          <p class="step-num">Step 02</p>
+          <h3 class="title is-size-5" style="margin-bottom:0.65rem;">Design &amp; Build</h3>
+          <p class="has-text-grey" style="font-size:0.93rem;line-height:1.65;">I design and build your site, keeping you updated at every step until you love it.</p>
+        </div>
+
+        <!-- Step 3: Launch & Grow -->
+        <div class="how-i-work-step reveal reveal-d3">
+          <div class="how-i-work-step-icon">
+            <!-- Rocket icon -->
+            <svg xmlns="http://www.w3.org/2000/svg" width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="#6E07F3" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z"/>
+              <path d="m12 15-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z"/>
+              <path d="M9 12H4s.55-3.03 2-4c1.62-1.08 5 0 5 0"/>
+              <path d="M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5"/>
+            </svg>
+          </div>
+          <p class="step-num">Step 03</p>
+          <h3 class="title is-size-5" style="margin-bottom:0.65rem;">Launch &amp; Grow</h3>
+          <p class="has-text-grey" style="font-size:0.93rem;line-height:1.65;">Your site goes live, ready to bring real customers from day one.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials Section -->
+  <section class="section testimonials has-text-centered is-medium is-white">
+    <div class="container is-narrow">
+      <h1 class="title is-spaced is-size-3-desktop is-size-4-mobile reveal">Testimonials</h1>
+      <h2 class="subtitle is-size-5-desktop has-text-weight-normal reveal reveal-d1">What my clients say about working with me.</h2>
+      <div class="columns is-centered">
+        <div class="column is-two-thirds">
+
+          <!-- Slider wrapper with navigation -->
+          <div class="testimonial-slider-wrap">
+            <!-- Prev button -->
+            <button class="tnav-btn prev" id="tnav-prev" aria-label="Previous testimonial">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
+            </button>
+            <!-- Next button -->
+            <button class="tnav-btn next" id="tnav-next" aria-label="Next testimonial">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+            </button>
+            <div class="testimonial-slider" id="testimonialSlider">
+
+            <!-- Slide 1 -->
+            <div class="testimonial-card testimonial-slide" id="slide-0">
+              <figure class="testimonial-avatar">
+                <img src="img/dr-navneet-avatar.png" alt="Dr Navneet Singh Chauhan"
+                  style="width:72px;height:72px;border-radius:50%;object-fit:cover;object-position:top;margin:0 auto 1.25rem;">
+              </figure>
+              <span class="testimonial-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+              <blockquote class="testimonial-quote">
+                <p class="is-size-5">&ldquo;Manish built exactly what our clinic needed. Within a few weeks of launching the site, we started getting new patient enquiries online. Professional, fast, and easy to work with.&rdquo;</p>
+              </blockquote>
+              <p class="testimonial-name has-text-weight-bold" style="margin-top:1.25rem;">Dr Navneet Singh Chauhan</p>
+              <p class="testimonial-role has-text-grey is-size-6">Dental Clinic Owner</p>
+            </div>
+
+            <!-- Slide 2 -->
+            <div class="testimonial-card testimonial-slide" id="slide-1" style="display:none;">
+              <figure class="testimonial-avatar">
+                <img src="img/mentors-defence-avatar.png" alt="Mentors Defence Institute"
+                  style="width:72px;height:72px;border-radius:50%;object-fit:cover;object-position:top;margin:0 auto 1.25rem;">
+              </figure>
+              <span class="testimonial-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+              <blockquote class="testimonial-quote">
+                <p class="is-size-5">&ldquo;Manish delivered a clean, professional website for our institute. We started getting online registration enquiries almost immediately after launch. Highly recommend his work!&rdquo;</p>
+              </blockquote>
+              <p class="testimonial-name has-text-weight-bold" style="margin-top:1.25rem;">Mentors Defence Institute</p>
+              <p class="testimonial-role has-text-grey is-size-6">Defence Coaching Institute, Dehradun</p>
+            </div>
+
+            <!-- Slide 3 -->
+            <div class="testimonial-card testimonial-slide" id="slide-2" style="display:none;">
+              <figure class="testimonial-avatar">
+                <img src="img/video-crafts-avatar.png" alt="Video Crafts India"
+                  style="width:72px;height:72px;border-radius:50%;object-fit:cover;object-position:top;margin:0 auto 1.25rem;">
+              </figure>
+              <span class="testimonial-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+              <blockquote class="testimonial-quote">
+                <p class="is-size-5">&ldquo;Our website now truly reflects the quality of our work. Clients compliment the design all the time and bookings have noticeably improved since launch. Manish understood our vision perfectly.&rdquo;</p>
+              </blockquote>
+              <p class="testimonial-name has-text-weight-bold" style="margin-top:1.25rem;">Video Crafts India</p>
+              <p class="testimonial-role has-text-grey is-size-6">Wedding Photographers &amp; Videographers, Chandigarh</p>
+            </div>
+
+            <!-- Slide 4 -->
+            <div class="testimonial-card testimonial-slide" id="slide-3" style="display:none;">
+              <figure class="testimonial-avatar">
+                <img src="img/cinestyle-avatar.png" alt="Cinestyle India"
+                  style="width:72px;height:72px;border-radius:50%;object-fit:cover;object-position:top;margin:0 auto 1.25rem;">
+              </figure>
+              <span class="testimonial-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+              <blockquote class="testimonial-quote">
+                <p class="is-size-5">&ldquo;Manish created a stunning website that matches our cinematic brand perfectly. Our premium clients love the look and we've seen a clear uptick in high-value enquiries.&rdquo;</p>
+              </blockquote>
+              <p class="testimonial-name has-text-weight-bold" style="margin-top:1.25rem;">Cinestyle India</p>
+              <p class="testimonial-role has-text-grey is-size-6">Wedding Cinematographers</p>
+            </div>
+
+            <!-- Slide 5 -->
+            <div class="testimonial-card testimonial-slide" id="slide-4" style="display:none;">
+              <figure class="testimonial-avatar">
+                <img src="img/perfect-pixels-avatar.png" alt="Perfect Pixels Production"
+                  style="width:72px;height:72px;border-radius:50%;object-fit:cover;object-position:top;margin:0 auto 1.25rem;">
+              </figure>
+              <span class="testimonial-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+              <blockquote class="testimonial-quote">
+                <p class="is-size-5">&ldquo;We wanted a website that matched the feel of our photography â€” elegant and modern. Manish delivered exactly that, and we started getting new client leads within weeks of going live.&rdquo;</p>
+              </blockquote>
+              <p class="testimonial-name has-text-weight-bold" style="margin-top:1.25rem;">Perfect Pixels Production</p>
+              <p class="testimonial-role has-text-grey is-size-6">Photography &amp; Cinematography Studio</p>
+            </div>
+
+          </div><!-- /testimonial-slider -->
+
+            <!-- Navigation Dots -->
+            <div class="testimonial-dots" id="testimonial-dots"></div>
+          </div><!-- /testimonial-slider-wrap -->
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+
+  <!-- New Standalone CTA Section -->
+  <section id="cta-new">
+    <div class="container">
+      <p class="cta-title">Ready to grow your business online?</p>
+      <p class="cta-sub">Let&#8217;s build a website that brings you real customers.</p>
+      <a class="cta-btn" href="contact.html">Contact Me</a>
+    </div>
+  </section>
+  <!-- New Footer -->
+  <footer id="site-footer">
+    <div class="footer-inner">
+
+      <!-- Brand -->
+      <div class="footer-brand">
+        <span class="footer-logo-name">Manish</span>
+        <p class="footer-tagline">Helping businesses grow online ðŸš€</p>
+      </div>
+
+      <!-- Nav -->
+      <nav class="footer-links">
+        <a href="#services">Services</a>
+        <a href="#portfolio">Projects</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+
+      <!-- Contact -->
+      <div class="footer-contact">
+        <a href="tel:+919520468449">
+          <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 1.2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.71 2.81a2 2 0 0 1-.45 2.11L7.91 8.79a16 16 0 0 0 6.29 6.29l.96-.96a2 2 0 0 1 2.11-.45c.91.35 1.85.58 2.81.71A2 2 0 0 1 22 16.92z"/></svg>
+          +91 9520468449
+        </a>
+        <a href="mailto:manishbarakoti3@gmail.com">
+          <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+          manishbarakoti3@gmail.com
+        </a>
+      </div>
+
+      <!-- Socials -->
+      <div class="footer-socials">
+        <a href="https://github.com" target="_blank" rel="noopener" aria-label="GitHub">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.373 0 12c0 5.303 3.438 9.8 8.207 11.387.6.11.793-.26.793-.577v-2.234c-3.338.724-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.757-1.333-1.757-1.09-.745.083-.729.083-.729 1.205.084 1.84 1.237 1.84 1.237 1.07 1.834 2.807 1.304 3.492.997.108-.775.418-1.305.762-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.468-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.3 1.23a11.5 11.5 0 0 1 3.003-.404c1.02.005 2.047.138 3.003.404 2.29-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.61-2.807 5.625-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.565 21.796 24 17.3 24 12c0-6.627-5.373-12-12-12z"/></svg>
+        </a>
+        <a href="https://linkedin.com" target="_blank" rel="noopener" aria-label="LinkedIn">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+        </a>
+      </div>
+
+      <!-- Divider -->
+      <div class="footer-divider"></div>
+
+      <!-- Copyright -->
+      <p class="footer-copy">&copy; 2026 Manish Barakoti. All rights reserved.</p>
+
+    </div>
+  </footer>
+
+  <style>
+    #site-footer {
+      background: #1a1a2e;
+      padding: 4rem 1.5rem 2.5rem;
+      text-align: center;
+      border-top: 1px solid rgba(255,255,255,0.06);
+    }
+    .footer-inner {
+      max-width: 640px;
+      margin: 0 auto;
+    }
+    .footer-logo-name {
+      display: block;
+      font-size: 1.6rem;
+      font-weight: 800;
+      color: #ffffff;
+      letter-spacing: -0.02em;
+      margin-bottom: 0.5rem;
+    }
+    .footer-tagline {
+      color: #a0a0b8;
+      font-size: 0.95rem;
+      margin: 0 0 2rem;
+    }
+    .footer-links {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      margin-bottom: 1.75rem;
+      flex-wrap: wrap;
+    }
+    .footer-links a {
+      color: #a0a0b8;
+      text-decoration: none;
+      font-size: 0.9rem;
+      font-weight: 500;
+      transition: color 0.2s ease;
+    }
+    .footer-links a:hover { color: #ffffff; }
+    .footer-contact {
+      display: flex;
+      justify-content: center;
+      gap: 1.5rem;
+      flex-wrap: wrap;
+      margin-bottom: 1.75rem;
+    }
+    .footer-contact a {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      color: #a0a0b8;
+      text-decoration: none;
+      font-size: 0.88rem;
+      transition: color 0.2s ease;
+    }
+    .footer-contact a:hover { color: #ffffff; }
+    .footer-socials {
+      display: flex;
+      justify-content: center;
+      gap: 1.1rem;
+      margin-bottom: 2rem;
+    }
+    .footer-socials a {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background: rgba(255,255,255,0.07);
+      color: #a0a0b8;
+      text-decoration: none;
+      transition: background 0.2s ease, color 0.2s ease, transform 0.2s ease;
+    }
+    .footer-socials a:hover {
+      background: rgba(255,255,255,0.14);
+      color: #ffffff;
+      transform: translateY(-2px);
+    }
+    .footer-divider {
+      height: 1px;
+      background: rgba(255,255,255,0.08);
+      margin-bottom: 1.5rem;
+    }
+    .footer-copy {
+      color: #5a5a72;
+      font-size: 0.82rem;
+    }
+    @media (max-width: 480px) {
+      .footer-contact { flex-direction: column; align-items: center; gap: 0.75rem; }
+      .footer-links { gap: 1.25rem; }
+    }
+  </style>
+
+  <!-- â”€â”€ Contact Modal â”€â”€ -->
+  <div id="contact-modal-overlay">
+    <div id="contact-modal" role="dialog" aria-modal="true" aria-labelledby="modal-heading">
+      <button id="contact-modal-close" aria-label="Close">&times;</button>
+      <img src="img/mk-avatar.jpg" alt="Manish Barakoti" class="modal-avatar">
+      <h2 class="modal-heading" id="modal-heading">I&#8217;m excited to learn about your project.<br>Ready to get
+        started?</h2>
+
+      <!-- Success Message -->
+      <div id="modal-form-success" style="display:none;text-align:center;padding:1.5rem 0;">
+        <span class="icon has-text-success" style="font-size:2.5rem;"><i class="fa-regular fa-circle-check"></i></span>
+        <h3 class="title is-size-5" style="margin-top:1rem;">Message Sent!</h3>
+        <p class="subtitle is-size-6">Thanks for reaching out. I&#8217;ll get back to you soon.</p>
+      </div>
+
+      <form id="modal-contact-form" class="modal-form" novalidate>
+        <div class="columns is-multiline">
+          <!-- Row 1: Name + Email -->
+          <div class="column is-6-tablet is-12-mobile">
+            <div class="field">
+              <label class="label">Name</label>
+              <div class="control">
+                <input class="input is-medium" type="text" name="name" id="modal-name" placeholder="" required>
+              </div>
+              <p class="help is-danger" id="modal-name-error" style="display:none;">Please enter your name.</p>
+            </div>
+          </div>
+          <div class="column is-6-tablet is-12-mobile">
+            <div class="field">
+              <label class="label">Email</label>
+              <div class="control">
+                <input class="input is-medium" type="email" name="email" id="modal-email" placeholder="" required>
+              </div>
+              <p class="help is-danger" id="modal-email-error" style="display:none;">Please enter a valid email.</p>
+            </div>
+          </div>
+          <!-- Row 2: Type + Budget -->
+          <div class="column is-6-tablet is-12-mobile">
+            <div class="field">
+              <label class="label">Type of project</label>
+              <div class="control">
+                <div class="select is-medium is-fullwidth">
+                  <select name="website_type" id="modal-website-type" required>
+                    <option value="" disabled selected></option>
+                    <option value="Business Website">Business Website</option>
+                    <option value="Coaching Website">Coaching Website</option>
+                    <option value="Clinic / Dental Website">Clinic / Dental Website</option>
+                    <option value="Landing Page">Landing Page</option>
+                    <option value="Website Redesign">Website Redesign</option>
+                  </select>
+                </div>
+              </div>
+              <p class="help is-danger" id="modal-type-error" style="display:none;">Please select a project type.</p>
+            </div>
+          </div>
+          <div class="column is-6-tablet is-12-mobile">
+            <div class="field">
+              <label class="label">Budget</label>
+              <div class="control">
+                <div class="select is-medium is-fullwidth">
+                  <select name="budget" id="modal-budget">
+                    <option value="" disabled selected></option>
+                    <option value="&#8377;5,000 &#8211; &#8377;10,000">&#8377;5,000 &#8211; &#8377;10,000</option>
+                    <option value="&#8377;10,000 &#8211; &#8377;20,000">&#8377;10,000 &#8211; &#8377;20,000</option>
+                    <option value="&#8377;20,000 &#8211; &#8377;40,000">&#8377;20,000 &#8211; &#8377;40,000</option>
+                    <option value="&#8377;40,000+">&#8377;40,000+</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Row 3: Additional Details -->
+          <div class="column is-12">
+            <div class="field">
+              <label class="label">Additional details</label>
+              <div class="control">
+                <textarea class="textarea is-medium" name="message" id="modal-message" rows="5" placeholder=""
+                  required></textarea>
+              </div>
+              <p class="help is-danger" id="modal-message-error" style="display:none;">Please describe your project.</p>
+            </div>
+          </div>
+          <!-- Submit -->
+          <div class="column is-12" style="text-align:center;margin-top:0.5rem;">
+            <button class="button is-primary is-outlined is-rounded is-medium has-text-weight-normal" type="submit"
+              style="min-width:160px;">Submit</button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+  <!-- â”€â”€ End Contact Modal â”€â”€ -->
+
+  <!-- Sticky WhatsApp Button -->
+  <a id="whatsapp-float" href="https://wa.me/919520468449?text=Hi%20Manish%2C%20I%20need%20a%20website" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
+    <!-- Inline WhatsApp SVG - always visible, no FA dependency -->
+    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" fill="#ffffff">
+      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/>
+    </svg>
+  </a>
+
+  <script src="js/main-min.js"></script>
+  <script>
+    // Smooth scroll for "View My Recent Work" hero button
+    var _heroViewBtn = document.getElementById('hero-view-work-btn');
+    if (_heroViewBtn) {
+      _heroViewBtn.addEventListener('click', function (e) {
+        e.preventDefault();
+        var target = document.getElementById('portfolio');
+        if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      });
+    }
+  </script>
+
+  <!-- Testimonial Slider JS -->
+  <script>
+    (function () {
+      var slides = document.querySelectorAll('.testimonial-slide');
+      var dotsWrap = document.getElementById('testimonial-dots');
+      var prevBtn = document.getElementById('tnav-prev');
+      var nextBtn = document.getElementById('tnav-next');
+      if (!slides.length || !dotsWrap) return;
+
+      var current = 0;
+      var total = slides.length;
+      var autoTimer;
+
+      // Build dots
+      slides.forEach(function (_, i) {
+        var dot = document.createElement('button');
+        dot.className = 'testimonial-dot' + (i === 0 ? ' is-active' : '');
+        dot.setAttribute('aria-label', 'Go to testimonial ' + (i + 1));
+        dot.addEventListener('click', function () { goTo(i); resetAuto(); });
+        dotsWrap.appendChild(dot);
+      });
+
+      function getDots() { return dotsWrap.querySelectorAll('.testimonial-dot'); }
+
+      function goTo(idx) {
+        slides[current].style.display = 'none';
+        slides[current].classList.remove('is-animating');
+        getDots()[current].classList.remove('is-active');
+        current = (idx + total) % total;
+        slides[current].style.display = '';
+        // Trigger reflow for animation restart
+        void slides[current].offsetWidth;
+        slides[current].classList.add('is-animating');
+        getDots()[current].classList.add('is-active');
+      }
+
+      function resetAuto() {
+        clearInterval(autoTimer);
+        autoTimer = setInterval(function () { goTo(current + 1); }, 5500);
+      }
+
+      if (prevBtn) prevBtn.addEventListener('click', function () { goTo(current - 1); resetAuto(); });
+      if (nextBtn) nextBtn.addEventListener('click', function () { goTo(current + 1); resetAuto(); });
+
+      // Init
+      slides.forEach(function (s, i) { if (i !== 0) s.style.display = 'none'; });
+      resetAuto();
+    })();
+  </script>
+
+  <!-- Scroll Reveal + Navbar Scroll JS -->
+  <script>
+    (function () {
+      // Scroll Reveal
+      var revealEls = document.querySelectorAll('.reveal');
+      if ('IntersectionObserver' in window && revealEls.length) {
+        var obs = new IntersectionObserver(function (entries) {
+          entries.forEach(function (e) {
+            if (e.isIntersecting) { e.target.classList.add('is-visible'); obs.unobserve(e.target); }
+          });
+        }, { threshold: 0.12 });
+        revealEls.forEach(function (el) { obs.observe(el); });
+      } else {
+        revealEls.forEach(function (el) { el.classList.add('is-visible'); });
+      }
+
+      // Navbar scroll shadow
+      var navbar = document.querySelector('.navbar');
+      if (navbar) {
+        window.addEventListener('scroll', function () {
+          if (window.scrollY > 40) navbar.classList.add('is-scrolled');
+          else navbar.classList.remove('is-scrolled');
+        }, { passive: true });
+      }
+    })();
+  </script>
+  <script>
+    (function () {
+      var overlay = document.getElementById('contact-modal-overlay');
+      var modal = document.getElementById('contact-modal');
+      var closeBtn = document.getElementById('contact-modal-close');
+      var form = document.getElementById('modal-contact-form');
+      var successBox = document.getElementById('modal-form-success');
+
+      // Open modal
+      function openModal() {
+        overlay.classList.add('is-active');
+        document.body.style.overflow = 'hidden';
+        // Reset form each open
+        form.style.display = '';
+        successBox.style.display = 'none';
+        form.reset();
+        clearErrors();
+      }
+
+      // Close modal
+      function closeModal() {
+        overlay.classList.remove('is-active');
+        document.body.style.overflow = '';
+      }
+
+      // Trigger buttons
+      document.querySelectorAll('.contact-modal-trigger').forEach(function (el) {
+        el.addEventListener('click', function (e) {
+          e.preventDefault();
+          e.stopPropagation();
+          openModal();
+        });
+      });
+
+      // Close on X button
+      closeBtn.addEventListener('click', closeModal);
+
+      // Close on overlay backdrop click
+      overlay.addEventListener('click', function (e) {
+        if (e.target === overlay) closeModal();
+      });
+
+      // Close on ESC key
+      document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape') closeModal();
+      });
+
+      // Helpers
+      function showError(id, show) {
+        var el = document.getElementById(id);
+        if (el) el.style.display = show ? 'block' : 'none';
+      }
+      function setInvalid(inputId, invalid) {
+        var el = document.getElementById(inputId);
+        if (!el) return;
+        if (invalid) el.classList.add('is-danger'); else el.classList.remove('is-danger');
+      }
+      function clearErrors() {
+        ['modal-name-error', 'modal-email-error', 'modal-type-error', 'modal-message-error'].forEach(function (id) { showError(id, false); });
+        ['modal-name', 'modal-email', 'modal-message'].forEach(function (id) { setInvalid(id, false); });
+      }
+
+      // Form submit
+      form.addEventListener('submit', function (e) {
+        e.preventDefault();
+        var valid = true;
+
+        var name = document.getElementById('modal-name').value.trim();
+        showError('modal-name-error', !name); setInvalid('modal-name', !name);
+        if (!name) valid = false;
+
+        var email = document.getElementById('modal-email').value.trim();
+        var emailOk = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+        showError('modal-email-error', !emailOk); setInvalid('modal-email', !emailOk);
+        if (!emailOk) valid = false;
+
+        var type = document.getElementById('modal-website-type').value;
+        showError('modal-type-error', !type);
+        if (!type) valid = false;
+
+        var msg = document.getElementById('modal-message').value.trim();
+        showError('modal-message-error', !msg); setInvalid('modal-message', !msg);
+        if (!msg) valid = false;
+
+        if (!valid) return;
+
+        var budget = document.getElementById('modal-budget') ? document.getElementById('modal-budget').value : '';
+        var waMsg =
+          'New Website Inquiry\n\n' +
+          'Name: ' + name + '\n' +
+          'Email: ' + email + '\n' +
+          'Project Type: ' + (type || 'Not specified') + '\n' +
+          'Budget: ' + (budget || 'Not specified') + '\n' +
+          'Details: ' + msg;
+
+        window.open('https://wa.me/919520468449?text=' + encodeURIComponent(waMsg), '_blank');
+        form.style.display = 'none';
+        successBox.style.display = 'block';
+      });
+    })();
+  </script>
+</body>
+
+</html>
