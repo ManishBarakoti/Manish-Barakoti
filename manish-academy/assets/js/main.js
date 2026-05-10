@@ -165,6 +165,57 @@
     });
   }
 
+  /* ---- Hero lead-capture form (index page) ---- */
+  function initHeroForm() {
+    var form = document.getElementById('enquiry');
+    if (!form || form.tagName !== 'FORM') return;
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+      var name = document.getElementById('h-name');
+      var phone = document.getElementById('h-phone');
+      var cls = document.getElementById('h-class');
+      var course = document.getElementById('h-course');
+
+      var fields = [name, phone, cls, course];
+      var valid = true;
+      fields.forEach(function (f) {
+        if (!f) return;
+        var v = (f.value || '').trim();
+        var ok = v.length > 0;
+        if (f.type === 'tel') ok = /^[0-9+\-\s()]{7,20}$/.test(v);
+        f.style.borderColor = ok ? '' : 'rgba(185, 28, 28, 0.5)';
+        if (!ok) valid = false;
+      });
+      if (!valid) return;
+
+      var msg =
+        'Manish Academy - Hero Enquiry\n' +
+        'Name: ' + name.value + '\n' +
+        'Phone: ' + phone.value + '\n' +
+        'Class: ' + cls.value + '\n' +
+        'Course: ' + course.value;
+      var url = 'https://wa.me/911123456789?text=' + encodeURIComponent(msg);
+      window.open(url, '_blank');
+
+      form.reset();
+      var btn = form.querySelector('button[type="submit"]');
+      if (btn) {
+        var original = btn.innerHTML;
+        btn.innerHTML = '<i class="ph-bold ph-check-circle"></i> Request sent';
+        btn.disabled = true;
+        setTimeout(function () {
+          btn.innerHTML = original;
+          btn.disabled = false;
+        }, 3500);
+      }
+    });
+
+    form.querySelectorAll('input, select').forEach(function (el) {
+      el.addEventListener('input', function () { el.style.borderColor = ''; });
+      el.addEventListener('change', function () { el.style.borderColor = ''; });
+    });
+  }
+
   /* ---- Newsletter form (footer) ---- */
   function initNewsletter() {
     var form = document.querySelector('.newsletter-form');
@@ -208,6 +259,7 @@
     initHeroParallax();
     initCourseFilter();
     initContactForm();
+    initHeroForm();
     initNewsletter();
     setYear();
   });
