@@ -1,21 +1,18 @@
 /* ==========================================================================
-   Manish Academy - Main JS
-   Handles: navbar toggle, scroll state, scroll reveal, course filter, form
+   Manish Academy — Main JS
+   Navbar, mobile menu, scroll reveal, course filter, form validation
    ========================================================================== */
 (function () {
   'use strict';
 
-  /* ---- Mark active nav link based on current page ---- */
+  /* ---- Active nav link based on current page ---- */
   function setActiveNav() {
     var path = window.location.pathname.split('/').pop() || 'index.html';
-    if (path === '') path = 'index.html';
+    if (!path || path === '') path = 'index.html';
     var links = document.querySelectorAll('.nav-links a[data-nav]');
     links.forEach(function (link) {
-      if (link.getAttribute('data-nav') === path) {
-        link.classList.add('active');
-      } else {
-        link.classList.remove('active');
-      }
+      if (link.getAttribute('data-nav') === path) link.classList.add('active');
+      else link.classList.remove('active');
     });
   }
 
@@ -29,23 +26,24 @@
       var isOpen = menu.classList.toggle('open');
       toggle.classList.toggle('active', isOpen);
       toggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+      document.body.style.overflow = isOpen ? 'hidden' : '';
     });
 
-    // Close menu when a link is clicked
     menu.querySelectorAll('a').forEach(function (a) {
       a.addEventListener('click', function () {
         menu.classList.remove('open');
         toggle.classList.remove('active');
+        document.body.style.overflow = '';
       });
     });
   }
 
-  /* ---- Navbar shadow on scroll ---- */
+  /* ---- Navbar scrolled state ---- */
   function initNavScroll() {
     var nav = document.querySelector('.navbar');
     if (!nav) return;
     var onScroll = function () {
-      if (window.scrollY > 20) nav.classList.add('scrolled');
+      if (window.scrollY > 30) nav.classList.add('scrolled');
       else nav.classList.remove('scrolled');
     };
     window.addEventListener('scroll', onScroll, { passive: true });
@@ -67,14 +65,27 @@
           io.unobserve(entry.target);
         }
       });
-    }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+    }, { threshold: 0.1, rootMargin: '0px 0px -60px 0px' });
     els.forEach(function (el) { io.observe(el); });
   }
 
-  /* ---- Course filter (courses page) ---- */
+  /* ---- Subtle hero parallax ---- */
+  function initHeroParallax() {
+    var media = document.querySelector('.hero-media');
+    if (!media) return;
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+    window.addEventListener('scroll', function () {
+      var y = window.scrollY;
+      if (y < window.innerHeight * 1.2) {
+        media.style.transform = 'translateY(' + (y * 0.15) + 'px)';
+      }
+    }, { passive: true });
+  }
+
+  /* ---- Course filter ---- */
   function initCourseFilter() {
     var buttons = document.querySelectorAll('.filter-btn');
-    var cards = document.querySelectorAll('.course-card[data-category]');
+    var cards = document.querySelectorAll('.course-item[data-category]');
     if (!buttons.length || !cards.length) return;
 
     buttons.forEach(function (btn) {
@@ -84,11 +95,8 @@
         btn.classList.add('active');
         cards.forEach(function (card) {
           var cats = (card.getAttribute('data-category') || '').split(' ');
-          if (filter === 'all' || cats.indexOf(filter) !== -1) {
-            card.classList.remove('hidden');
-          } else {
-            card.classList.add('hidden');
-          }
+          if (filter === 'all' || cats.indexOf(filter) !== -1) card.classList.remove('hidden');
+          else card.classList.add('hidden');
         });
       });
     });
@@ -100,89 +108,93 @@
     if (!form) return;
     var success = document.getElementById('form-success');
 
-    function setFieldError(fieldId, hasError) {
-      var field = document.getElementById(fieldId);
-      if (!field) return;
-      var wrap = field.closest('.form-field');
-      if (wrap) wrap.classList.toggle('has-error', !!hasError);
+    function setError(id, bad) {
+      var el = document.getElementById(id);
+      if (!el) return;
+      var wrap = el.closest('.form-field');
+      if (wrap) wrap.classList.toggle('has-error', !!bad);
     }
 
     form.addEventListener('submit', function (e) {
       e.preventDefault();
-      var data = {
-        name:    document.getElementById('cf-name'),
-        email:   document.getElementById('cf-email'),
-        phone:   document.getElementById('cf-phone'),
-        course:  document.getElementById('cf-course'),
-        message: document.getElementById('cf-message')
-      };
+      var name = document.getElementById('cf-name').value.trim();
+      var email = document.getElementById('cf-email').value.trim();
+      var phone = document.getElementById('cf-phone').value.trim();
+      var course = document.getElementById('cf-course').value;
+      var msg = document.getElementById('cf-message').value.trim();
+
       var valid = true;
+      if (!name) { setError('cf-name', true); valid = false; } else setError('cf-name', false);
 
-      var nameVal = data.name.value.trim();
-      setFieldError('cf-name', !nameVal);
-      if (!nameVal) valid = false;
+      var emailOk = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+      if (!emailOk) { setError('cf-email', true); valid = false; } else setError('cf-email', false);
 
-      var emailVal = data.email.value.trim();
-      var emailOk = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(emailVal);
-      setFieldError('cf-email', !emailOk);
-      if (!emailOk) valid = false;
+      var phoneOk = /^[0-9+\-\s()]{7,20}$/.test(phone);
+      if (!phoneOk) { setError('cf-phone', true); valid = false; } else setError('cf-phone', false);
 
-      var phoneVal = data.phone.value.trim();
-      var phoneOk = /^[0-9+\-\s()]{7,20}$/.test(phoneVal);
-      setFieldError('cf-phone', !phoneOk);
-      if (!phoneOk) valid = false;
-
-      var courseVal = data.course.value;
-      setFieldError('cf-course', !courseVal);
-      if (!courseVal) valid = false;
-
-      var msgVal = data.message.value.trim();
-      setFieldError('cf-message', msgVal.length < 5);
-      if (msgVal.length < 5) valid = false;
+      if (!course) { setError('cf-course', true); valid = false; } else setError('cf-course', false);
+      if (msg.length < 5) { setError('cf-message', true); valid = false; } else setError('cf-message', false);
 
       if (!valid) return;
 
-      // Simulate submission (no backend) and redirect to WhatsApp
       var waMsg =
         'Manish Academy — New Inquiry\n\n' +
-        'Name: ' + nameVal + '\n' +
-        'Email: ' + emailVal + '\n' +
-        'Phone: ' + phoneVal + '\n' +
-        'Course: ' + courseVal + '\n' +
-        'Message: ' + msgVal;
-
-      // Open WhatsApp in a new tab with a prefilled message
+        'Name: ' + name + '\n' +
+        'Email: ' + email + '\n' +
+        'Phone: ' + phone + '\n' +
+        'Course: ' + course + '\n' +
+        'Message: ' + msg;
       var waUrl = 'https://wa.me/911234567890?text=' + encodeURIComponent(waMsg);
       window.open(waUrl, '_blank');
 
       form.reset();
       if (success) {
-        success.classList.add('active');
         form.style.display = 'none';
+        success.classList.add('active');
         success.scrollIntoView({ behavior: 'smooth', block: 'center' });
       }
     });
 
-    // Clear error state while typing
     form.querySelectorAll('input, select, textarea').forEach(function (el) {
-      el.addEventListener('input', function () {
-        var wrap = el.closest('.form-field');
-        if (wrap) wrap.classList.remove('has-error');
-      });
-      el.addEventListener('change', function () {
-        var wrap = el.closest('.form-field');
-        if (wrap) wrap.classList.remove('has-error');
+      ['input', 'change'].forEach(function (evt) {
+        el.addEventListener(evt, function () {
+          var wrap = el.closest('.form-field');
+          if (wrap) wrap.classList.remove('has-error');
+        });
       });
     });
   }
 
-  /* ---- Set current year in footer ---- */
-  function setYear() {
-    var el = document.getElementById('year');
-    if (el) el.textContent = new Date().getFullYear();
+  /* ---- Newsletter form (footer) ---- */
+  function initNewsletter() {
+    var form = document.querySelector('.newsletter-form');
+    if (!form) return;
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+      var input = form.querySelector('input');
+      var btn = form.querySelector('button');
+      if (!input.value.trim() || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(input.value.trim())) {
+        input.style.borderColor = 'rgba(239, 68, 68, 0.4)';
+        input.focus();
+        return;
+      }
+      input.style.borderColor = '';
+      btn.textContent = 'Subscribed ✓';
+      input.value = '';
+      setTimeout(function () { btn.textContent = 'Subscribe'; }, 3000);
+    });
   }
 
-  /* ---- Init on DOM ready ---- */
+  /* ---- Set current year ---- */
+  function setYear() {
+    document.querySelectorAll('[data-year]').forEach(function (el) {
+      el.textContent = new Date().getFullYear();
+    });
+    var y = document.getElementById('year');
+    if (y) y.textContent = new Date().getFullYear();
+  }
+
+  /* ---- Init ---- */
   function ready(fn) {
     if (document.readyState !== 'loading') fn();
     else document.addEventListener('DOMContentLoaded', fn);
@@ -193,8 +205,10 @@
     initNavToggle();
     initNavScroll();
     initReveal();
+    initHeroParallax();
     initCourseFilter();
     initContactForm();
+    initNewsletter();
     setYear();
   });
 })();
